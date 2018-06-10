@@ -51,7 +51,7 @@ public class CacheDir {
      *
      * Se metodo 'achaLinha(String)' nao retornou nulo
      *      Se o vetor de inteiros na posicao 'aux[0]' for igual a um
-     *             Se o metodo 'achaTag(Int, String)' retornar verdadeiro
+     *             Se o metodo 'achaTag(Int, String)'
      *
      * Retorna true e acaba o metodo
      *

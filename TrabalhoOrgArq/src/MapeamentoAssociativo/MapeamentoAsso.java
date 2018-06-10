@@ -40,7 +40,7 @@ public class MapeamentoAsso {
      *
      * Inicializa uma variavel 'palavra' com as ultimas duas posicoes da variavel 'endereco'
      *
-     * Se o metodo 'add(String, String)' da classe CacheAsso retornar verdadeiro
+     * Se o metodo 'add(String, String)' da classe CacheAsso retornar true
      *
      * Retorna 'hit'
      *

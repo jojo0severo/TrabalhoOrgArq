@@ -138,7 +138,7 @@ public class App {
      *
      * Chama o metodo pausa para impedir a exibicao das opcoes logo apos a exibicao do retorno da classe Impressoes
      *
-     * Retorna verdadeiro para continuar o loop
+     * Retorna true para continuar o loop
      *
      *
      *
@@ -267,7 +267,7 @@ public class App {
      *
      * Chama o metodo pausa para impedir a exibicao das opcoes logo apos o salvamento
      *
-     * Retorna verdadeiro para continuar o loop
+     * Retorna true para continuar o loop
      *
      *
      *

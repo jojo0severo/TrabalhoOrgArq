@@ -12,7 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Linha.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Linha.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/Linha.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
@@ -60,15 +60,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CacheDir.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+              <folding>
+                <element signature="docComment;class#CacheDir#0" />
+                <element signature="docComment;method#CacheDir#0;class#CacheDir#0" />
+                <element signature="method#CacheDir#0;class#CacheDir#0" />
+                <element signature="method#add#0;class#CacheDir#0" />
+                <element signature="docComment;method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
+                <element signature="method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
+                <element signature="docComment;method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
+                <element signature="method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
+                <element signature="docComment;method#achaLinha#0;class#CacheDir#0" />
+                <element signature="method#achaLinha#0;class#CacheDir#0" />
+                <element signature="docComment;method#achaTag#0;class#CacheDir#0" />
+                <element signature="method#achaTag#0;class#CacheDir#0" />
+                <element signature="docComment;method#toString#0;class#CacheDir#0" />
+                <element signature="method#toString#0;class#CacheDir#0" />
+                <element signature="docComment;method#toStringTxt#0;class#CacheDir#0" />
+                <element signature="method#toStringTxt#0;class#CacheDir#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MapeamentoAsso.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="14" selection-start-line="14" selection-end-line="25" selection-end-column="7" />
+            <state relative-caret-position="252">
+              <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
               <folding>
                 <element signature="docComment;class#MapeamentoAsso#0" />
                 <element signature="method#MapeamentoAsso#0;class#MapeamentoAsso#0" />
-                <element signature="docComment;method#add16#0;class#MapeamentoAsso#0" />
                 <element signature="method#add16#0;class#MapeamentoAsso#0" />
                 <element signature="docComment;method#add32#0;class#MapeamentoAsso#0" />
                 <element signature="method#add32#0;class#MapeamentoAsso#0" />
@@ -117,10 +143,10 @@
         <option value="$PROJECT_DIR$/src/MapeamentoDireto/MapeamentoDir.java" />
         <option value="$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java" />
         <option value="$PROJECT_DIR$/src/Main/App.java" />
-        <option value="$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java" />
-        <option value="$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java" />
         <option value="$PROJECT_DIR$/src/MapeamentoAssociativo/CacheAsso.java" />
         <option value="$PROJECT_DIR$/src/MapeamentoDireto/Linha.java" />
+        <option value="$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java" />
+        <option value="$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java" />
       </list>
     </option>
   </component>
@@ -271,12 +297,12 @@
       <workItem from="1528504509518" duration="3344000" />
       <workItem from="1528530649756" duration="1834000" />
       <workItem from="1528565674979" duration="31337000" />
-      <workItem from="1528623852789" duration="16377000" />
+      <workItem from="1528623852789" duration="16619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58739000" />
+    <option name="totallyTimeSpent" value="58981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -296,7 +322,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -733,48 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="263" column="4" selection-start-line="263" selection-start-column="4" selection-end-line="263" selection-end-column="4" />
-          <folding>
-            <element signature="docComment;class#CacheDir#0" />
-            <element signature="docComment;method#CacheDir#0;class#CacheDir#0" />
-            <element signature="method#CacheDir#0;class#CacheDir#0" />
-            <element signature="docComment;method#add#0;class#CacheDir#0" />
-            <element signature="method#add#0;class#CacheDir#0" />
-            <element signature="docComment;method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
-            <element signature="method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
-            <element signature="docComment;method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
-            <element signature="method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
-            <element signature="docComment;method#achaLinha#0;class#CacheDir#0" />
-            <element signature="method#achaLinha#0;class#CacheDir#0" />
-            <element signature="docComment;method#achaTag#0;class#CacheDir#0" />
-            <element signature="method#achaTag#0;class#CacheDir#0" />
-            <element signature="docComment;method#toString#0;class#CacheDir#0" />
-            <element signature="method#toString#0;class#CacheDir#0" />
-            <element signature="docComment;method#toStringTxt#0;class#CacheDir#0" />
-            <element signature="method#toStringTxt#0;class#CacheDir#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" selection-start-line="14" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;class#MapeamentoAsso#0" />
-            <element signature="method#MapeamentoAsso#0;class#MapeamentoAsso#0" />
-            <element signature="docComment;method#add16#0;class#MapeamentoAsso#0" />
-            <element signature="method#add16#0;class#MapeamentoAsso#0" />
-            <element signature="docComment;method#add32#0;class#MapeamentoAsso#0" />
-            <element signature="method#add32#0;class#MapeamentoAsso#0" />
-            <element signature="docComment;method#getCache#0;class#MapeamentoAsso#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/CacheAsso.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -815,6 +799,46 @@
             <element signature="method#toString#0;class#Linha#0" />
             <element signature="docComment;method#toStringTxt#0;class#Linha#0" />
             <element signature="method#toStringTxt#0;class#Linha#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
+          <folding>
+            <element signature="docComment;class#MapeamentoAsso#0" />
+            <element signature="method#MapeamentoAsso#0;class#MapeamentoAsso#0" />
+            <element signature="method#add16#0;class#MapeamentoAsso#0" />
+            <element signature="docComment;method#add32#0;class#MapeamentoAsso#0" />
+            <element signature="method#add32#0;class#MapeamentoAsso#0" />
+            <element signature="docComment;method#getCache#0;class#MapeamentoAsso#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding>
+            <element signature="docComment;class#CacheDir#0" />
+            <element signature="docComment;method#CacheDir#0;class#CacheDir#0" />
+            <element signature="method#CacheDir#0;class#CacheDir#0" />
+            <element signature="method#add#0;class#CacheDir#0" />
+            <element signature="docComment;method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
+            <element signature="method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
+            <element signature="docComment;method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
+            <element signature="method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
+            <element signature="docComment;method#achaLinha#0;class#CacheDir#0" />
+            <element signature="method#achaLinha#0;class#CacheDir#0" />
+            <element signature="docComment;method#achaTag#0;class#CacheDir#0" />
+            <element signature="method#achaTag#0;class#CacheDir#0" />
+            <element signature="docComment;method#toString#0;class#CacheDir#0" />
+            <element signature="method#toString#0;class#CacheDir#0" />
+            <element signature="docComment;method#toStringTxt#0;class#CacheDir#0" />
+            <element signature="method#toStringTxt#0;class#CacheDir#0" />
           </folding>
         </state>
       </provider>

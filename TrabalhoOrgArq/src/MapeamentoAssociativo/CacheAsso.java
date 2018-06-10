@@ -58,9 +58,9 @@ public class CacheAsso {
      *      A variavel 'posicao' recebe o valor armazenado na posicao '1' do vetor de inteiros
      *
      * Se a variavel 'booleano' tiver o valor '1' armazenado, o metodo 'achaPalavra(String, Integer)'
-     * eh chamada, se retornar verdadeiro significa qeu achou a palavra na posicao indicada
+     * eh chamada, se retornar true significa qeu achou a palavra na posicao indicada
      *
-     * Retorna verdadeiro e acaba o metodo
+     * Retorna true e acaba o metodo
      *
      *
      * Se o metodo 'achaTag(String)' retornou um valor nulo
