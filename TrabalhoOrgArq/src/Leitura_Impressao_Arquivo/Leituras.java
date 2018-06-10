@@ -19,14 +19,10 @@ public class Leituras {
     private Integer missD16;
     private Integer hitD32;
     private Integer missD32;
-    private MapeamentoAsso mapA1;
-    private MapeamentoAsso mapA2;
-    private MapeamentoDir mapD1;
-    private MapeamentoDir mapD2;
-    private CacheAsso cacheAsso16;
-    private CacheAsso cacheAsso32;
-    private CacheDir cacheDir16;
-    private CacheDir cacheDir32;
+    private MapeamentoAsso mapA16;
+    private MapeamentoAsso mapA32;
+    private MapeamentoDir mapD16;
+    private MapeamentoDir mapD32;
 
     public Leituras() {
         this.hitA16 = 0;
@@ -38,19 +34,37 @@ public class Leituras {
         this.hitD32 = 0;
         this.missD32 = 0;
 
-        this.cacheAsso16 = new CacheAsso(16);
-        this.mapA1 = new MapeamentoAsso(cacheAsso16);
+        this.mapA16 = new MapeamentoAsso(16);
+        this.mapA32 = new MapeamentoAsso(32);
 
-        this.cacheAsso32 = new CacheAsso(32);
-        this.mapA2 = new MapeamentoAsso(cacheAsso32);
-
-
-        this.cacheDir16 = new CacheDir(16);
-        this.mapD1 = new MapeamentoDir(cacheDir16);
-
-        this.cacheDir32 = new CacheDir(32);
-        this.mapD2 = new MapeamentoDir(cacheDir32);
+        this.mapD16 = new MapeamentoDir(16);
+        this.mapD32 = new MapeamentoDir(32);
     }
+
+    /**
+     *
+     * Chama os metodos que iram atribuir as quantidades de hits e misses das
+     * quatro configuracoes da cache definidas para esta aplicacao
+     *
+     * O metodo 'leAssociativoAdresses16()' atribui valores as variaveis:
+     *      'hitA16' e 'missA16'
+     *
+     * O metodo 'leAssociativoAdresses32()' atribui valores as variaveis:
+     *      'hitA32' e 'missA32'
+     *
+     * O metoto 'leDiretoAdresses16()' atribui valores as variaveis:
+     *      'hitD16' e 'missD16'
+     *
+     * O metodo 'leDiretoAdresses32()' atribui valores as variaveis
+     *      'hitD32' e 'missD32'
+     *
+     *
+     * @method leAssociativoAdresses16()
+     * @method leAssociativoAdresses32()
+     * @method leDiretoAdresses16()
+     * @method leDiretoAdresses32()
+     * @throws Exception se houver algum erro durante a leitura do arquivo
+     */
 
     public void le() throws Exception{
         leAssociativoAdresses16();
@@ -62,92 +76,288 @@ public class Leituras {
         leDiretoAdresses32();
     }
 
+    /**
+     *
+     * O arquivo eh lido linha a linha atraves do metodo 'readLine()' da classe
+     * BufferedReader, onde cada linha eh armazenada na variavel 'line'
+     *
+     * Para cada linha lida, o metodo 'add(String)' da classe MapeamentoAsso retorna
+     * 'hit' ou 'miss'
+     *
+     * Caso retorne 'hit', a variavel 'hitA16' eh incrementada
+     *
+     * Caso retorne 'miss', a variavel 'missA16' eh incrementada
+     *
+     *
+     *
+     * @method add()
+     * @method readLine()
+     * @throws Exception se houver algum erro durante a leitura do arquivo
+     */
+
     private void leAssociativoAdresses16()throws Exception{
         bf = new BufferedReader(new FileReader(new File("AdressesBin.txt")));
 
         for (String line = bf.readLine(); line != null; line = bf.readLine())
-            if (mapA1.add16(line).equals("hit"))
+            if (mapA16.add16(line).equals("hit"))
                 hitA16++;
             else
                 missA16++;
 
     }
 
+    /**
+     *
+     * O arquivo eh lido linha a linha atraves do metodo 'readLine()' da classe
+     * BufferedReader, onde cada linha eh armazenada na variavel 'line'
+     *
+     * Para cada linha lida, o metodo 'add(String)' da classe MapeamentoAsso retorna
+     * 'hit' ou 'miss'
+     *
+     * Caso retorne 'hit', a variavel 'hitA32' eh incrementada
+     *
+     * Caso retorne 'miss', a variavel 'missA32' eh incrementada
+     *
+     *
+     *
+     * @method add()
+     * @method readLine()
+     * @throws Exception se houver algum erro durante a leitura do arquivo
+     */
+
     private void leAssociativoAdresses32() throws Exception {
         bf = new BufferedReader(new FileReader(new File("AdressesBin.txt")));
 
         for (String line = bf.readLine(); line != null; line = bf.readLine())
-            if (mapA2.add32(line).equals("hit"))
+            if (mapA32.add32(line).equals("hit"))
                 hitA32++;
             else
                 missA32++;
     }
 
+    /**
+     *
+     * O arquivo eh lido linha a linha atraves do metodo 'readLine()' da classe
+     * BufferedReader, onde cada linha eh armazenada na variavel 'line'
+     *
+     * Para cada linha lida, o metodo 'add(String)' da classe MapeamentoDir retorna
+     * 'hit' ou 'miss'
+     *
+     * Caso retorne 'hit', a variavel 'hitD16' eh incrementada
+     *
+     * Caso retorne 'miss', a variavel 'missD16' eh incrementada
+     *
+     *
+     *
+     * @method add()
+     * @method readLine()
+     * @throws Exception se houver algum erro durante a leitura do arquivo
+     */
+
     private void leDiretoAdresses16() throws Exception{
         bf = new BufferedReader(new FileReader(new File("AdressesBin.txt")));
 
         for (String line = bf.readLine(); line != null; line = bf.readLine())
-            if (mapD1.add16(line).equals("hit"))
+            if (mapD16.add16(line).equals("hit"))
                 hitD16++;
             else
                 missD16++;
     }
 
+    /**
+     *
+     * O arquivo eh lido linha a linha atraves do metodo 'readLine()' da classe
+     * BufferedReader, onde cada linha eh armazenada na variavel 'line'
+     *
+     * Para cada linha lida, o metodo 'add(String)' da classe MapeamentoDir retorna
+     * 'hit' ou 'miss'
+     *
+     * Caso retorne 'hit', a variavel 'hitD32' eh incrementada
+     *
+     * Caso retorne 'miss', a variavel 'missD32' eh incrementada
+     *
+     *
+     *
+     * @method add()
+     * @method readLine()
+     * @throws Exception se houver algum erro durante a leitura do arquivo
+     */
+
     private void leDiretoAdresses32() throws Exception {
         bf = new BufferedReader(new FileReader(new File("AdressesBin.txt")));
 
         for (String line = bf.readLine(); line != null; line = bf.readLine())
-            if (mapD2.add32(line).equals("hit"))
+            if (mapD32.add32(line).equals("hit"))
                 hitD32++;
             else
                 missD32++;
     }
 
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'hitA16'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
+
     Integer getHitA16() {
         return hitA16;
     }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'missA16'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
 
     Integer getMissA16() {
         return missA16;
     }
 
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'hitA32'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
+
     Integer getHitA32() {
         return hitA32;
     }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'missA32'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
 
     Integer getMissA32() {
         return missA32;
     }
 
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'hitD16'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
+
     Integer getHitD16() {
         return hitD16;
     }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'missD16'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
 
     Integer getMissD16() {
         return missD16;
     }
 
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'hitD32'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
+
     Integer getHitD32() {
         return hitD32;
     }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'missD32'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
 
     Integer getMissD32() {
         return missD32;
     }
 
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'cacheAsso16'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
+
     CacheAsso getCacheAsso16() {
-        return cacheAsso16;
+        return mapA16.getCache();
     }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'cacheAsso32'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
 
     CacheAsso getCacheAsso32() {
-        return cacheAsso32;
+        return mapA32.getCache();
     }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'cacheDir16'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
 
     CacheDir getCacheDir16() {
-        return cacheDir16;
+        return mapD16.getCache();
     }
 
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'cacheDir32'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     * @return Integer
+     */
+
     CacheDir getCacheDir32() {
-        return cacheDir32;
+        return mapD32.getCache();
     }
 }

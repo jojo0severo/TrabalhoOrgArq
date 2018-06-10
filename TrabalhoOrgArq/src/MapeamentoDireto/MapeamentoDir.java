@@ -3,8 +3,12 @@ package MapeamentoDireto;
 public class MapeamentoDir {
     private CacheDir cache;
 
-    public MapeamentoDir(CacheDir cache){
-        this.cache = cache;
+    public MapeamentoDir(int tipoCache){
+        if (tipoCache == 16)
+            cache = new CacheDir(16);
+
+        else if (tipoCache == 32)
+            cache = new CacheDir(32);
     }
 
     public String add16(String endereco){
@@ -27,5 +31,9 @@ public class MapeamentoDir {
 
         else
             return "miss";
+    }
+
+    public CacheDir getCache(){
+        return cache;
     }
 }

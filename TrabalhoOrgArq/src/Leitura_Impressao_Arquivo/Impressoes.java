@@ -5,6 +5,13 @@ import MapeamentoDireto.CacheDir;
 
 import java.text.DecimalFormat;
 
+/**
+ *
+ * Classe responsavel por gerenciar as impressoes de dados potencialmente importantes para o usuario
+ *
+ *
+ */
+
 public class Impressoes {
     private DecimalFormat df;
     private Integer hitA16;
@@ -63,6 +70,27 @@ public class Impressoes {
 
     }
 
+    /**
+     *
+     * Insere na variavel da classe String 'valoresAssociativo' o valor de retorno de 'imprimeValoresMapAsso()'
+     * o qual ira retornar uma pequena tabela contendo a quantidade de hits e misses das duas configuracoes da cache com
+     * mapeamento associativo, assim como a porcentagem de hits de cada uma
+     *
+     * Insere na variavel da classe String 'valoresDireto' o valor de retorno de 'imprimeValoresMapDir()'
+     * o qual ira retornar uma pequena tabela contendo a quantidade de hits e misses das duas configuracoes da cache com
+     * mapeamento direto, assim como a porcentagem de hits de cada uma
+     *
+     * Insere na variavel da classe String 'caches' o valor de retorno de 'imprimeCaches()'
+     * o qual ira retornar uma pequena tabela contendo a formatacao das quatro configuracoes
+     * de cache especificadas no trabalho
+     *
+     *
+     *
+     * @method imprimeValoresMapAsso()
+     * @method imprimeValoresMapDir()
+     * @method imprimeCaches()
+     */
+
     public void imprime(){
         valoresAssociativo = imprimeValoresMapAsso();
 
@@ -70,6 +98,20 @@ public class Impressoes {
 
         caches = imprimeCaches();
     }
+
+    /**
+     *
+     * Retorna uma pequena tabela contendo a quantidade de hits e misses das duas configuracoes da cache
+     * commapeamento associativo, assim como a porcentagem de hits de cada uma
+     *
+     * Utiliza o metodo 'format(double)' da classe DecimalFormat para limitar o numero de casas decimais
+     * para tres
+     *
+     *
+     *
+     * @method format()
+     * @return String
+     */
 
     private String imprimeValoresMapAsso(){
         return "   Mapeamento Associativo\n\n" +
@@ -83,6 +125,20 @@ public class Impressoes {
                        "Porcentagem de hits: " + df.format((hitA32*100)/288.0);
     }
 
+    /**
+     *
+     * Retorna uma pequena tabela contendo a quantidade de hits e misses das duas configuracoes da cache com
+     * mapeamento direto, assim como a porcentagem de hits de cada uma
+     *
+     * Utiliza o metodo 'format(double)' da classe DecimalFormat para limitar o numero de casas decimais para
+     * tres
+     *
+     *
+     *
+     * @method format()
+     * @return String
+     */
+
     private String imprimeValoresMapDir(){
         return "    Mapeamento Direto\n\n" +
                        "Cache 16 linhas\n" +
@@ -95,6 +151,22 @@ public class Impressoes {
                        "Porcentagem de hits: " + df.format((hitD32*100)/288.0);
     }
 
+    /**
+     *
+     * Insere na variavel 'cacheMapAsso' o valor de retorno do metodo 'imprimeCacheMapeamentoAssociativo()', o qual
+     * ira retornar duas tabelas simulando duas configuracoes de cache com mapeamento associativo
+     *
+     * Insere na variavel 'cacheMapDir' o valor de retorno do metodo 'imprimeCacheMapeamentoDireto()', o qual ira
+     * retornar duas tabelas simulando duas configuracoes de cache com mapeamento direto
+     *
+     * Retorna a concatenacao das duas variaveis 'cacheMapAsso' e 'cacheMapDir'
+     *
+     *
+     * @method imprimeCacheMapeamentoAssociativo()
+     * @method imprimeCacheMapeamentoDireto()
+     * @return String
+     */
+
     private String imprimeCaches(){
         cacheMapAsso = imprimeCacheMapeamentoAssociativo();
 
@@ -102,6 +174,18 @@ public class Impressoes {
 
         return cacheMapAsso + "\n\n\n\n" + cacheMapDir;
     }
+
+    /**
+     *
+     * Retorna duas tabelas simulando duas configuracoes de cache com mapeamento associativo. Com o uso do metodo
+     * 'toString()' da cache, eh possivel imprimir todas as linhas da cache juntamente com a posicao de memoria,
+     * a tag e o bloco de palavras correspondente de cada linha
+     *
+     *
+     *
+     * @method toString()
+     * @return String
+     */
 
     private String imprimeCacheMapeamentoAssociativo() {
         return "\t\t\t\t\tMapeamento associativo\n\n" +
@@ -115,6 +199,18 @@ public class Impressoes {
 
     }
 
+    /**
+     *
+     * Retorna duas tabelas simulando duas configuracoes de cache com mapeamento direto. Com o uso do metodo
+     * 'toString()' da cache, eh possivel imprimir todas as linhas da cache juntamente com a posicao de memoria,
+     * a propria linha, a tag e o bloco de palavras de cada linha
+     *
+     *
+     *
+     * @method toString()
+     * @return String
+     */
+
     private String imprimeCacheMapeamentoDireto() {
         return "\t\t\t\t\tMapeamento Direto\n\n" +
                        "Cache 16 linhas\n" +
@@ -126,41 +222,127 @@ public class Impressoes {
                        cacheDir32.toString();
     }
 
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'valoresDireto'
+     *
+     * @return String
+     */
+
     public String getValorDireto(){
         return valoresDireto;
     }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'valoresAssociativo'
+     *
+     * @return String
+     */
 
     public String getValorAssociativo(){
         return valoresAssociativo;
     }
 
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'cacheMapAsso'
+     *
+     * @return String
+     */
+
     public String getCacheMapAsso(){
         return cacheMapAsso;
     }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'cacheMapDir'
+     *
+     * @return String
+     */
 
     public String getCacheMapDir(){
         return cacheMapDir;
     }
 
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'caches'
+     *
+     * @return String
+     */
+
     public String getCaches(){
         return caches;
     }
+
+    /**
+     *
+     * Retorna a contatenacao dos valores armazenados nas variaveis 'valoresAssociativo' e 'cacheMapAsso'
+     *
+     *
+     *
+     * @return String
+     */
 
     public String getAssociativo(){
         return valoresAssociativo + "\n\n\n\n\n\n\n\n" + cacheMapAsso;
     }
 
+    /**
+     *
+     * Retorna a contatenacao dos valores armazenados nas variaveis 'valoresDireto' e 'cacheMapDir'
+     *
+     *
+     *
+     * @return String
+     */
+
     public String getDireto(){
         return valoresDireto + "\n\n\n\n\n\n\n\n" + cacheMapDir;
     }
+
+    /**
+     *
+     * Retorna a contatenacao dos valores armazenados nas variaveis 'valoresAssociativo' e 'valoresDireto'
+     *
+     *
+     *
+     * @return String
+     */
 
     public String getValores(){
         return valoresAssociativo + "\n\n\n\n\n\n" + valoresDireto;
     }
 
+    /**
+     *
+     * Retorna a contatenacao dos valores armazenados nas variaveis 'valoresAssociativo', 'valoresDireto'
+     * e 'caches'
+     *
+     *
+     *
+     * @return String
+     */
+
     public String getDocumentoCompleto(){
         return valoresAssociativo + "\n\n\n\n\n\n" + valoresDireto + "\n\n\n\n\n\n\n\n" + caches;
     }
+
+    /**
+     *
+     * Retorna uma tabela contendo a porcentagem de hits das quatro configuracoes de cache
+     * definidas para esta aplicacoes
+     *
+     * O metodo 'format(double)' da classe DecimalFormat eh utilizado para limitar ate tres
+     * casas decimais
+     *
+     *
+     *
+     * @method format()
+     * @return String
+     */
 
     public String getPorcentagemHits(){
         return "   Mapeamento Associativo\n\n" +
@@ -177,6 +359,19 @@ public class Impressoes {
 
     }
 
+    /**
+     *
+     * Retorna uma tabela contendo a porcentagem de hits das duas configuracoes da
+     * cache com mapeamento associativo
+     *
+     * O metodo 'format(double)' da classe DecimalFormat eh utilizado para limitar ate tres
+     * casas decimais
+     *
+     *
+     * @method format()
+     * @return String
+     */
+
     public String getPorcentagemHitsAssociativo(){
         return "   Mapeamento Associativo\n\n" +
                        "Cache de 16 linhas\n" +
@@ -186,6 +381,19 @@ public class Impressoes {
                        "Porcentagem de hits: " + df.format((hitA32*100)/288.0);
     }
 
+    /**
+     *
+     * Retorna uma tabela contendo a porcentagem de hits das duas configuracoes da
+     * cache com mapeamento direto
+     *
+     * O metodo 'format(double)' da classe DecimalFormat eh utilizado para limitar ate tres
+     * casas decimais
+     *
+     *
+     * @method format()
+     * @return String
+     */
+
     public String getPorcentagemHistDireto(){
         return "   Mapeamento Direto\n\n" +
                        "Cache 16 linhas\n" +
@@ -193,6 +401,16 @@ public class Impressoes {
                        "Cache 32 linhas\n" +
                        "Porcentagem de hits: " + df.format((hitD32*100)/288.0);
     }
+
+    /**
+     *
+     * Retorna uma tabela contendo a quantidade de misses e hits das quatro configuracoes
+     * de cache definidas para esta aplicacao
+     *
+     *
+     *
+     * @return String
+     */
 
     public String getQuantidadeHitsMisses(){
         return "   Mapeamento Associativo\n\n" +
@@ -212,6 +430,16 @@ public class Impressoes {
                        "Misses: " + missD32;
     }
 
+    /**
+     *
+     * Retorna uma tabela contendo a quantidade de misses e hits das duas configuracoes
+     * de cache com mapeamento associativo
+     *
+     *
+     *
+     * @return String
+     */
+
     public String getQuantidadeHitsMissesAssociativo(){
         return "   Mapeamento Associativo\n\n" +
                        "Cache de 16 linhas\n" +
@@ -222,6 +450,16 @@ public class Impressoes {
                        "Misses: " + missD32;
     }
 
+    /**
+     *
+     * Retorna uma tabela contendo a quantidade de misses e hits das duas configuracoes
+     * de cache com mapeamento direto
+     *
+     *
+     *
+     * @return String
+     */
+
     public String getQuantidadeHitsMissesDireto(){
         return "    Mapeamento Direto\n\n" +
                        "Cache 16 linhas\n" +
@@ -231,6 +469,18 @@ public class Impressoes {
                        "Hits: " + hitD32 + "\t\t" +
                        "Misses: " + missD32;
     }
+
+    /**
+     *
+     * Retorna duas tabelas simulando quatro configuracoes de cache definidas na aplicacao. Com o uso do metodo
+     * 'toStringTxt()' da cache, eh possivel imprimir todas as linhas da cache juntamente com a posicao de memoria,
+     * a tag e o bloco de palavras concatenadas com a tag correspondente de cada linha
+     *
+     *
+     *
+     * @method toStringTxt()
+     * @return String
+     */
 
     String getCachesTxt(){
         return "\t\t\t\t\tMapeamento associativo\n\n" +
