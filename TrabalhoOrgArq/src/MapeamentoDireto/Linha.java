@@ -226,6 +226,9 @@ public class Linha {
         for (String aPalavra : palavra)
             palavras = palavras + " | " + aPalavra;
 
+        if (tipoCache == 16)
+            return linha[0] + "   | " + tag[0] + " " + palavras;
+
         return linha[0] + "  | " + tag[0] + " " + palavras;
     }
 

@@ -1,5 +1,7 @@
 package MapeamentoAssociativo;
 
+import Leitura_Impressao_Arquivo.Leituras;
+
 /**
  *
  * Classe que simula uma memoria associativa e uma cache
@@ -35,13 +37,14 @@ public class CacheAsso {
 
     CacheAsso(int tipoCache){
         this.tipoCache = tipoCache;
+
+        this.posLinha = 0;
+
         if (tipoCache==16)
             linha = new String[16][5];
 
         else if(tipoCache==32)
             linha = new String[32][3];
-
-        posLinha = 0;
     }
 
     /**
@@ -51,17 +54,11 @@ public class CacheAsso {
      * Inicializa um vetor de inteiros com o retorno do metodo 'achaTag(String)', o qual ira
      * retornar um vetor de inteiros caso achar a tag, ou nulo se nao achar
      *
-     * Inicializa duas variaveis inteiro
-     *
-     * Se metodo 'achaTag(String)' nao retornou nulo
-     *      A variavel 'booleano' recebe o valor armazenado na posicao '0' do vetor de inteiros
-     *      A variavel 'posicao' recebe o valor armazenado na posicao '1' do vetor de inteiros
-     *
-     * Se a variavel 'booleano' tiver o valor '1' armazenado, o metodo 'achaPalavra(String, Integer)'
-     * eh chamada, se retornar true significa qeu achou a palavra na posicao indicada
+     * Se a variavel 'aux' na posicao 'aux[0]' tiver o valor '1' armazenado, o metodo
+     * 'achaPalavra(String, Integer)' chamada, se retornar true significa que achou a
+     * palavra na posicao indicada
      *
      * Retorna true e acaba o metodo
-     *
      *
      * Se o metodo 'achaTag(String)' retornou um valor nulo
      *
@@ -71,10 +68,6 @@ public class CacheAsso {
      * uma nova linha eh alterada para '0'
      *
      * Se nao estiver inicializamos uma variavel do tipo String
-     *
-     * Se a configuracao da cache for de 16 linhas, a variavel recebe '00'
-     *
-     * Se a configuracao da cache for de 32 linhas, a variavel recebe '0'
      *
      * Essa variavel simula o comeco das palavras de cada tag, ou seja, a primeira posicao do
      * bloco: '00 01 10 11'
@@ -93,6 +86,13 @@ public class CacheAsso {
      *
      * A variavel 'posLinha' eh incrementada
      *
+     * Se o retorno do metodo 'calculaBin(String)' tiver um tamanho igual a um e a configuracao da cache
+     * for de 16 linhas, deve ser adicionado um '0' na variavel 'palavraAux' para manter o padrao:
+     *      00 01 10 11
+     *
+     * Inves do que retoraria:
+     *      0 1 10 11
+     *
      * Retorna false e acaba o metodo
      *
      *
@@ -107,33 +107,26 @@ public class CacheAsso {
 
     boolean add(String tag, String palavra){
         Integer[] aux = achaTag(tag);
-        int booleano = 0;
-        int posicao = 0;
 
-        if (aux!=null) {
-            booleano = aux[0];
-            posicao = aux[1];
-        }
-
-        if (booleano==1)
-            if (achaPalavra(palavra, posicao))
-                return true;
+        if (aux!=null)
+            if (aux[0]==1)
+                if (achaPalavra(palavra, aux[1]))
+                    return true;
 
         if (posLinha==linha.length)
             posLinha = 0;
 
-        String palavraAux = "";
-
-        if (tipoCache==16)
-            palavraAux = "00";
-
-        else if (tipoCache == 32)
-            palavraAux = "0";
+        String palavraAux = "0";
 
         linha[posLinha][0] = tag;
+
         for (int i = 1; i < linha[0].length; i++) {
             if (palavraAux.equals("1011"))
                 palavraAux = "11";
+
+            if (palavraAux.length()==1 && tipoCache==16)
+                palavraAux = "0" + palavraAux;
+
             linha[posLinha][i] = palavraAux;
             palavraAux = calculaBin(palavraAux);
         }
@@ -232,12 +225,6 @@ public class CacheAsso {
      * Inicializa uma variavel 'palavras' com o valor do em binario da variavel 'aux'
      * mais '1'
      *
-     * Se o tamanho da variavel 'palavras' for igual a um e a configuracao da cache for
-     * de dezesseis linhas
-     *
-     * A variavel 'palavras' recebe a String '0' mais a propria variavel 'palavras', dessa
-     * forma evita que no bloco de palavras surja algo como: '0, 1 , 10 , 11'
-     *
      * Retorna o valor da variavel 'palavras' e acaba o metodo
      *
      *
@@ -251,9 +238,6 @@ public class CacheAsso {
     private String calculaBin(String palavra){
         Integer aux = Integer.parseInt(palavra);
         String palavras = Integer.toBinaryString(aux+1);
-
-        if (palavras.length()==1 && tipoCache==16)
-            palavras = "0"+ palavras;
 
         return palavras;
     }
@@ -413,6 +397,43 @@ public class CacheAsso {
             index++;
         }
 
+
+        return  posMemoriaString;
+    }
+
+    /**
+     *
+     *
+     *
+     * @param leituras
+     * @return String
+     */
+
+    public String toStringPosMemoriaOriginal(Leituras leituras){
+        String linhaString;
+        String posMemoriaString = "";
+        String hexPos = "";
+
+        for (String[] aLinha : linha) {
+            linhaString = aLinha[0] + " ";
+
+            for (int j = 1; j < linha[0].length; j++)
+                linhaString = linhaString + "  |  " + aLinha[j];
+
+            linhaString = linhaString + "\n";
+
+            if (tipoCache == 16)
+                hexPos = leituras.getEnderecoPosMemoria16().get(aLinha[0]);
+
+            else if(tipoCache == 32)
+                hexPos = leituras.getEnderecoPosMemoria32().get(aLinha[0]);
+
+
+            if (hexPos.length() == 1)
+                posMemoriaString = posMemoriaString + hexPos + "\t\t\t\t\t===>\t\t" + linhaString;
+            else
+                posMemoriaString = posMemoriaString + hexPos + "\t\t\t\t===>\t\t" + linhaString;
+        }
 
         return  posMemoriaString;
     }

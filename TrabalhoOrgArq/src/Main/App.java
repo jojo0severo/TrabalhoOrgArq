@@ -45,39 +45,32 @@ import java.util.Scanner;
 
 public class App {
     private static Impressoes impressoes;
+    private static Arquivo arquivo;
+    private static Leituras leituras;
 
     /**
      *
-     * Inicializa a variavel leituras e chama o metodo le() da classe Leituras
-     * o qual inicializa os contadores de hits e misses das quatro configuracoes
-     * das caches
-     *
-     * Inicializa a variavel impressoes e chama o metodo imprime() da classe
-     * Impressoes, o qual cria as Strings contendo cada uma das opcoes abaixo:
-     *
-     *   - Valores do Mapeamento Associativo (variavel correspondente = valoresAssociativo)
-     *   - Valores do Mapeamento Direto (variavel correspondente = valoresDireto)
-     *   - Cache do Mapeamento Associativo (variavel correspondente = cacheMapAsso)
-     *   - Cache do Mapeamento Direto (variavel correspondente = cacheMapDir
-     *
+     * Chama o metodo 'preCondicoes()' para inicializar as classes necessarias
+     * para o funcionamento do sistema
      *
      * Chama o metodo acoesUsuario() para comecar a interacao entre o sistema e o usuario
      *
+     *
+     *
      * @param args utilizacao no terminal
      * @method acoesUsuario()
+     * @method preCondicoes()
      * @throws Exception caso ocorra algum erro na escrita e|ou leitura do arquivo
      */
 
     public static void main(String[] args) throws Exception{
-        Leituras leituras = new Leituras();
-        leituras.le();
 
-        impressoes = new Impressoes(leituras);
-        impressoes.imprime();
+        System.out.println("Antes de executar a aplicacao, certifique-se que a pasta 'ArquivosGerados' " +
+                                   "nao esta selecionada como somente leitura");
+
+        preCondicoes();
 
         acoesUsuario();
-
-
     }
 
     /**
@@ -114,7 +107,8 @@ public class App {
 
 
 
-        System.out.println("Dados a serem salvos em arquivos dentro da pasta do projeto");
+        System.out.println("\n\n\nDados a serem salvos em arquivos dentro da pasta 'ArquivosGerados' no projeto");
+        System.out.println("\n==>Os arquivos selecionados seram salvos no termino da execucao da aplicacao<==\n");
 
         while (acoesSalvar())
             acoesSalvar();
@@ -128,7 +122,7 @@ public class App {
      * Armazena na variavel 'opcao' a escolha do usuario:
      *  - caso seja '0', o metodo acaba;
      *  - caso seja '-1', a aplicacao para;
-     *  - caso seja maior que '15', o sistema imprime uma mensagem de erro, chama o metodo 'pausa()',
+     *  - caso seja maior que '20', o sistema imprime uma mensagem de erro, chama o metodo 'pausa()',
      * apresenta novamente as opcoes para o usuario e altera a varivel 'opcao' para a nova escolha do usuario
      *  - caso nao caia em nenhuma das validacoes anteriores, o metodo encontra multiplas opcoes
      *
@@ -161,7 +155,7 @@ public class App {
         if (opcao == -1)
             System.exit(1);
 
-        while (opcao > 15){
+        while (opcao > 20){
             System.err.println("Opcao invalida!\n");
             pausa();
             escolhasImpressao();
@@ -214,6 +208,20 @@ public class App {
             case 15:
                 System.out.println("\n" + impressoes.getQuantidadeHitsMissesDireto());
                 break;
+            case 16:
+                System.out.println("\n" + impressoes.getCachesOrig());
+                break;
+            case 17:
+                System.out.println("\n" + impressoes.getCacheMapAssoOrig());
+                break;
+            case 18:
+                System.out.println("\n" + impressoes.getCacheMapDirOrig());
+            case 19:
+                System.out.println("\n" + impressoes.getAssociativoOrig());
+                break;
+            case 20:
+                System.out.println("\n" + impressoes.getDiretoOrig());
+                break;
             default:
                 System.err.println("\n" + "Opcao Invalida!");
         }
@@ -247,6 +255,11 @@ public class App {
         System.out.println("13 - Quantidade de hits e misses");
         System.out.println("14 - Quantidade de hits e misses do Mapeamento Associativo");
         System.out.println("15 - Quantidade de hits e misses do Mapeamento Direto");
+        System.out.println("16 - Todas as caches com suas posicoes de memoria originais");
+        System.out.println("17 - Cache do Mapeamento Associativo com posicao de memoria original");
+        System.out.println("18 - Cache do Mapeamento Direto com posicao de memoria original");
+        System.out.println("19 - Todos os dados do Mapeamento Associativo com posicao de memoria original");
+        System.out.println("20 - Todos os dados do Mapeamento Direto com a posicao de memoria original");
     }
 
     /**
@@ -257,7 +270,7 @@ public class App {
      *
      * Armazena na variavel 'opcao' a escolha do usuario:
      *  - caso seja '0', a aplicacao para
-     *  - caso seja maior que '15', o sistema imprime uma mensagem de erro, chama o metodo 'pausa()',
+     *  - caso seja maior que '14', o sistema imprime uma mensagem de erro, chama o metodo 'pausa()',
      * apresenta novamente as opcoes para o usuario e altera a varivel 'opcao' para a nova escolha do usuario
      *  - caso nao caia em nenhuma das validacoes anteriores, o metodo encontra multiplas opcoes
      *
@@ -274,13 +287,14 @@ public class App {
      *
      * @method escolhasSalvar()
      * @method pausa()
+     * @method metodos da classe Arquivo
      * @return boolean
      * @throws Exception caso ocorra algum erro na escrita do arquivo
      */
 
     private static boolean acoesSalvar() throws Exception{
-        Arquivo arquivo = new Arquivo(impressoes);
         Scanner in = new Scanner(System.in);
+
 
         escolhasSalvar();
 
@@ -289,7 +303,7 @@ public class App {
         if (opcao == 0)
             System.exit(1);
 
-        while (opcao > 9){
+        while (opcao > 14){
             System.err.println("Opcao invalida!\n");
             pausa();
             escolhasSalvar();
@@ -324,6 +338,21 @@ public class App {
             case 9:
                 arquivo.escreveCacheDireto();
                 break;
+            case 10:
+                arquivo.escreveCachesComEnderecoOriginal();
+                break;
+            case 11:
+                arquivo.escreveCacheDirOrig();
+                break;
+            case 12:
+                arquivo.escreveCacheAssoOrig();
+                break;
+            case 13:
+                arquivo.escreveMapeamentoAssociativoOrig();
+                break;
+            case 14:
+                arquivo.escreveMapeamentoDiretoOrig();
+                break;
             default:
                 System.err.println("\n" + "Opcao Invalida!");
         }
@@ -353,6 +382,11 @@ public class App {
         System.out.println("7  - Valores do Mapeamento Direto");
         System.out.println("8  - Cache do Mapeamento Associativo");
         System.out.println("9  - Cache do Mapeamento Direto");
+        System.out.println("10 - Todas as caches com suas posicoes de memoria originais");
+        System.out.println("11 - Cache do Mapeamento Associativo com posicao de memoria original");
+        System.out.println("12 - Cache do Mapeamento Direto com posicao de memoria original");
+        System.out.println("13 - Todos os dados do Mapeamento Associativo com posicao de memoria original");
+        System.out.println("14 - Todos os dados do Mapeamento Direto com posicao de memoria original");
     }
 
     /**
@@ -376,5 +410,56 @@ public class App {
             System.exit(1);
 
         System.out.println("\n\n\n\n\n\n\n\n");
+    }
+
+    /**
+     *
+     * Inicializa a variavel 'leituras' e chama o metodo 'le()' da classe Leituras
+     * o qual inicializa os contadores de hits e misses das quatro configuracoes
+     * das caches e a variavel contento os valores de binario e hexadecimal
+     *
+     * Inicializa a variavel 'impressoes' e chama o metodo 'imprime()' da classe
+     * Impressoes, o qual cria as Strings contendo cada uma das opcoes abaixo:
+     *
+     *      - Valores do Mapeamento Associativo (variavel correspondente = valoresAssociativo)
+     *      - Valores do Mapeamento Direto (variavel correspondente = valoresDireto)
+     *      - Cache do Mapeamento Associativo (variavel correspondente = cacheMapAsso)
+     *      - Cache do Mapeamento Direto (variavel correspondente = cacheMapDir
+     *
+     * Inicializa a variavel 'arquivo' e chama os metodos 'escreveEnderecosBinHexa()' e
+     * 'escreveCachesTxt()' que sera utilizado devido ao uso das variaveis envolvidas nestes
+     * metodos (enderecoPosMemoria16 e enderecoPosMemoria32) para realizar a impressao e
+     * salvamento das caches com endereco de memoria originais (metodo referente 'imprimeCachesComPosMemoriaOriginal()')
+     *
+     *
+     * Iniciazaliza novamente a variavel 'arquivo' com a variavel 'impressoes' que agora possui as variaveis
+     * da classe HashMap enderecoPosMemoria16 e enderecoPosMemoria32 com valores atribuidos a elas
+     *
+     *
+     *
+     * @method imprime()
+     * @method le()
+     * @method escreveEnderecosBinHexa()
+     * @method escreveCachesTxt()
+     * @method le2()
+     * @method imprime2()
+     * @throws Exception se houver algum erro na leitura e|ou escrita de algum arquivo
+     */
+
+    private static void preCondicoes()throws Exception{
+        leituras = new Leituras();
+        leituras.le();
+
+        impressoes = new Impressoes(leituras);
+        impressoes.imprime();
+
+        arquivo = new Arquivo(impressoes);
+        arquivo.escreveEnderecosBinHexa();
+        arquivo.escreveCachesTxt();
+
+        leituras.le2();
+        impressoes.imprime2();
+
+        arquivo = new Arquivo(impressoes);
     }
 }

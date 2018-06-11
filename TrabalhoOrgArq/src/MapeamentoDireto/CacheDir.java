@@ -1,5 +1,7 @@
 package MapeamentoDireto;
 
+import Leitura_Impressao_Arquivo.Leituras;
+
 /**
  *
  * Classe que simula um cache com mapeamento direto
@@ -12,6 +14,7 @@ package MapeamentoDireto;
 public class CacheDir {
     private Linha[] linhas;
     private Integer posLinha;
+    private int tipoCache;
 
     /**
      *
@@ -29,6 +32,9 @@ public class CacheDir {
      */
 
     CacheDir(Integer tipoCache){
+        this.tipoCache = tipoCache;
+
+        this.posLinha = 0;
 
         if (tipoCache==16) {
             linhas = new Linha[16];
@@ -39,7 +45,6 @@ public class CacheDir {
             settaTipoCacheLinhas32();
         }
 
-        posLinha = 0;
     }
 
     /**
@@ -138,7 +143,6 @@ public class CacheDir {
 
     }
 
-
     /**
      *
      * Inicializa um vetor de inteiros com duas posicoes
@@ -209,7 +213,6 @@ public class CacheDir {
 
     private boolean achaTag(Integer pos, String tag){
         return linhas[pos].getTag().equals(tag);
-
     }
 
     /**
@@ -309,5 +312,27 @@ public class CacheDir {
 
         return cache;
     }
+
+    public String toStringPosMemoriaOriginal(Leituras leituras){
+        String cache = "";
+        String hexPos = "";
+
+        for (int i = 0; i < linhas.length-1; i++) {
+            if (tipoCache == 16)
+                hexPos = leituras.getEnderecoPosMemoria16().get(linhas[i].getTag()+linhas[i].getLinha());
+
+            else if(tipoCache == 32)
+                hexPos = leituras.getEnderecoPosMemoria32().get(linhas[i].getTag()+linhas[i].getLinha());
+
+            if (hexPos.length()==1)
+                cache = cache +  "\n" + hexPos +  "\t\t\t\t\t===>\t\t" +linhas[i].toString();
+            else
+                cache = cache +  "\n" + hexPos +  "\t\t\t\t===>\t\t" +linhas[i].toString();
+        }
+
+        return cache;
+    }
+
+
 
 }

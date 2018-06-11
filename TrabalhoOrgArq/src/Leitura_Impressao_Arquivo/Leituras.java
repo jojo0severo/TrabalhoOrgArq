@@ -8,9 +8,13 @@ import MapeamentoDireto.MapeamentoDir;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.HashMap;
 
 public class Leituras {
     private BufferedReader bf;
+    private String[][] binHexa;
+    private HashMap<String, String> enderecoPosMemoria16;
+    private HashMap<String, String> enderecoPosMemoria32;
     private Integer hitA16;
     private Integer missA16;
     private Integer hitA32;
@@ -55,14 +59,20 @@ public class Leituras {
      * O metoto 'leDiretoAdresses16()' atribui valores as variaveis:
      *      'hitD16' e 'missD16'
      *
-     * O metodo 'leDiretoAdresses32()' atribui valores as variaveis
+     * O metodo 'leDiretoAdresses32()' atribui valores as variaveis:
      *      'hitD32' e 'missD32'
+     *
+     * O metodo 'leAdressesBin()' atribui valor a variavel:
+     *      'binHexa'
+     *
      *
      *
      * @method leAssociativoAdresses16()
      * @method leAssociativoAdresses32()
      * @method leDiretoAdresses16()
      * @method leDiretoAdresses32()
+     * @method leAdressesBin()
+     * @method guardaEnderecos()
      * @throws Exception se houver algum erro durante a leitura do arquivo
      */
 
@@ -74,6 +84,41 @@ public class Leituras {
         leDiretoAdresses16();
 
         leDiretoAdresses32();
+
+        leAdressesBin();
+    }
+
+    /**
+     *
+     * Chama os metodos que ira atribuir valores aos dicionarios contendo o valor
+     * em binario como chave e o valor em hexadecimal como valor
+     *
+     * O metodo 'guardaEnderecos()' atribui valores as variaveis:
+     *      'enderecoPostMemoria16' e 'enderecoPosMemoria32'
+     *
+     *
+     *
+     * @method guardaEnderecos()
+     */
+
+    public void le2(){
+        guardaEnderecos();
+    }
+
+    /**
+     *
+     * Metodo inicializador dos metodos 'guardaEnderecosOriginais16()' e 'guardaEnderecosOriginais32()'
+     *
+     *
+     *
+     * @method guardaEnderecosOriginais32()
+     * @method guardaEnderecosOriginais16();
+     */
+
+    private void guardaEnderecos(){
+        guardaEnderecosOriginais16();
+
+        guardaEnderecosOriginais32();
     }
 
     /**
@@ -96,7 +141,7 @@ public class Leituras {
      */
 
     private void leAssociativoAdresses16()throws Exception{
-        bf = new BufferedReader(new FileReader(new File("AdressesBin.txt")));
+        bf = new BufferedReader(new FileReader(new File("ArquivosNecessarios/AdressesBin.txt")));
 
         for (String line = bf.readLine(); line != null; line = bf.readLine())
             if (mapA16.add16(line).equals("hit"))
@@ -126,7 +171,7 @@ public class Leituras {
      */
 
     private void leAssociativoAdresses32() throws Exception {
-        bf = new BufferedReader(new FileReader(new File("AdressesBin.txt")));
+        bf = new BufferedReader(new FileReader(new File("ArquivosNecessarios/AdressesBin.txt")));
 
         for (String line = bf.readLine(); line != null; line = bf.readLine())
             if (mapA32.add32(line).equals("hit"))
@@ -155,7 +200,7 @@ public class Leituras {
      */
 
     private void leDiretoAdresses16() throws Exception{
-        bf = new BufferedReader(new FileReader(new File("AdressesBin.txt")));
+        bf = new BufferedReader(new FileReader(new File("ArquivosNecessarios/AdressesBin.txt")));
 
         for (String line = bf.readLine(); line != null; line = bf.readLine())
             if (mapD16.add16(line).equals("hit"))
@@ -184,13 +229,142 @@ public class Leituras {
      */
 
     private void leDiretoAdresses32() throws Exception {
-        bf = new BufferedReader(new FileReader(new File("AdressesBin.txt")));
+        bf = new BufferedReader(new FileReader(new File("ArquivosNecessarios/AdressesBin.txt")));
 
         for (String line = bf.readLine(); line != null; line = bf.readLine())
             if (mapD32.add32(line).equals("hit"))
                 hitD32++;
             else
                 missD32++;
+    }
+
+    /**
+     *
+     * Inicializa uma matriz com tamanho '288' por '2', ou seja, 288 posicoes
+     * com duas posicoes disponiveis ao lado de cada
+     *
+     * Inicializa um inteiro que sera usado como indice para percorrer a matriz
+     * verticalmente
+     *
+     * O arquivo eh lido linha a linha atraves do metodo 'readLine()' da classe
+     * BufferedReader, onde cada linha eh armazenada na variavel 'line'
+     *
+     * Para cada linha lida, a linha eh adicionada a matriz na posicao 'binHex[index][0]'
+     *
+     * O index eh incrementado para continuar percorrendo a matriz
+     *
+     * Chama o metodo 'leAdressesHexa()'
+     *
+     *
+     * @method leAdressesHexa()
+     * @throws Exception caso ocorra algum erro na leitura do arquivo
+     */
+
+    private void leAdressesBin()throws Exception{
+        binHexa = new String[288][2];
+        bf = new BufferedReader(new FileReader(new File("ArquivosNecessarios/AdressesBin.txt")));
+        int index = 0;
+
+        for (String line = bf.readLine(); line != null; line = bf.readLine()) {
+            binHexa[index][0] = line;
+            index++;
+        }
+
+        leAdressesHexa();
+
+    }
+
+    /**
+     *
+     * Inicializa um inteiro que sera usado como indice para percorrer a matriz
+     * verticalmente
+     *
+     * O arquivo eh lido linha a linha atraves do metodo 'readLine()' da classe
+     * BufferedReader, onde cada linha eh armazenada na variavel 'line'
+     *
+     * Para cada linha lida, a linha eh adicionada a matriz na posicao 'binHex[index][1]'
+     *
+     * O index eh incrementado para continuar percorrendo a matriz
+     *
+     *
+     *
+     * @throws Exception
+     */
+
+    private void leAdressesHexa()throws Exception{
+        bf = new BufferedReader(new FileReader(new File("ArquivosNecessarios/AdressesHexa")));
+        int index = 0;
+
+        for (String line = bf.readLine(); line != null; line = bf.readLine()){
+            binHexa[index][1] = "   " + line;;
+            index++;
+        }
+
+    }
+
+    /**
+     *
+     * Inicializar um dicionario com a classe HashMap
+     *
+     * Percorre as posicoes da matriz e armazena no dicionario as quatorze
+     * primeiras posicoes de 'binHexa[index][0]' e 'binHexa[index][1]', dessa forma
+     * a chave do nosso dicionario sera a tag (caso seja associativo) ou a concatencao
+     * da tag com a linha (caso seja direto) e o valor associado a chave sera o numero
+     * em hexadecimal
+     *
+     *
+     *
+     */
+
+    private void guardaEnderecosOriginais16(){
+        enderecoPosMemoria16 = new HashMap<>();
+
+        for (int i = 0; i < binHexa.length;i++)
+            enderecoPosMemoria16.put(binHexa[i][0].substring(0,14), binHexa[i][1]);
+    }
+
+    /**
+     *
+     * Inicializar um dicionario com a classe HashMap
+     *
+     * Percorre as posicoes da matriz e armazena no dicionario as quinze primeiras
+     * posicoes de 'binHexa[index][0]' e 'binHexa[index][1]', dessa forma a chave
+     * do nosso dicionario sera a tag (caso seja associativo) ou a concatencao da tag
+     * com a linha (caso seja direto) e o valor associado a chave sera o numero em hexadecimal
+     *
+     *
+     *
+     */
+
+    private void guardaEnderecosOriginais32(){
+        enderecoPosMemoria32 = new HashMap<>();
+
+        for (int i = 0; i < binHexa.length;i++)
+            enderecoPosMemoria32.put(binHexa[i][0].substring(0,15), binHexa[i][1]);
+    }
+
+    /**
+     *
+     * Retorna um dicionario com os valores armazenados na variavel 'enderecoPosMemoria16'
+     *
+     *
+     * @return HashMap<String,String>
+     */
+
+    public HashMap<String, String> getEnderecoPosMemoria16(){
+        return enderecoPosMemoria16;
+    }
+
+    /**
+     *
+     * Retorna um dicionario com os valores armazenados na variavel 'enderecoPosMemoria32'
+     *
+     *
+     * @return HashMap<String,String>
+     */
+
+    public HashMap<String, String> getEnderecoPosMemoria32(){
+        return enderecoPosMemoria32;
     }
 
     /**
@@ -359,5 +533,20 @@ public class Leituras {
 
     CacheDir getCacheDir32() {
         return mapD32.getCache();
+    }
+
+    /**
+     *
+     * Retorna uma matriz com os valores armazenados na variavel 'binHexa'
+     *
+     * Metodo visivel somente no pacote 'Leitura_Impressao_Arquivo'
+     *
+     *
+     *
+     * @return String[][]
+     */
+
+    String[][] getBinHexa(){
+        return binHexa;
     }
 }

@@ -29,10 +29,16 @@ public class Impressoes {
     private String valoresDireto;
     private String valoresAssociativo;
     private String caches;
+    private String cachesOrig;
     private String cacheMapAsso;
     private String cacheMapDir;
+    private String cacheMapAssoOrig;
+    private String cacheMapDirOrig;
+    private Leituras leituras;
 
     public Impressoes(Leituras leituras) {
+        this.leituras = leituras;
+
         this.valoresAssociativo = "";
 
         this.hitA16 = leituras.getHitA16();
@@ -52,15 +58,18 @@ public class Impressoes {
 
 
         this.caches = "";
+        this.cachesOrig = "";
 
 
         this.cacheMapAsso = "";
+        this.cacheMapAssoOrig = "";
 
         this.cacheAsso16 = leituras.getCacheAsso16();
         this.cacheAsso32 = leituras.getCacheAsso32();
 
 
         this.cacheMapDir = "";
+        this.cacheMapDirOrig = "";
 
         this.cacheDir16 = leituras.getCacheDir16();
         this.cacheDir32 = leituras.getCacheDir32();
@@ -80,23 +89,37 @@ public class Impressoes {
      * o qual ira retornar uma pequena tabela contendo a quantidade de hits e misses das duas configuracoes da cache com
      * mapeamento direto, assim como a porcentagem de hits de cada uma
      *
-     * Insere na variavel da classe String 'caches' o valor de retorno de 'imprimeCaches()'
-     * o qual ira retornar uma pequena tabela contendo a formatacao das quatro configuracoes
-     * de cache especificadas no trabalho
-     *
-     *
      *
      * @method imprimeValoresMapAsso()
      * @method imprimeValoresMapDir()
-     * @method imprimeCaches()
      */
 
     public void imprime(){
         valoresAssociativo = imprimeValoresMapAsso();
 
         valoresDireto = imprimeValoresMapDir();
+    }
 
+    /**
+     *
+     * Insere na variavel da classe String 'caches' o valor de retorno de 'imprimeCaches()'
+     * o qual ira retornar uma pequena tabela contendo a formatacao das quatro configuracoes
+     * de cache especificadas no trabalho
+     *
+     * Insere na variavel da classe String 'cachesOrig' o valor de retorno de 'ímprimeCachesComPosMemoriaOriginal()' o
+     * qual ira retornar uma pequena tabela contendo a formatacao das quatro configuracoes de cache especificadas no
+     * trabalho com seus enderecos de memoria originais
+     *
+     *
+     *
+     * @method imprimeCaches()
+     * @method imprimeCachesComPosMemoriaOriginal()
+     */
+
+    public void imprime2(){
         caches = imprimeCaches();
+
+        cachesOrig = imprimeCachesComPosMemoriaOriginal();
     }
 
     /**
@@ -114,15 +137,15 @@ public class Impressoes {
      */
 
     private String imprimeValoresMapAsso(){
-        return "   Mapeamento Associativo\n\n" +
-                       "Cache de 16 linhas\n" +
-                       "Hits: " + hitA16 + "\t\t" +
-                       "Misses: " + missA16 + "\n\n" +
-                       "Porcentagem de hits: " + df.format((hitA16*100)/288.0)+ "\n\n\n" +
-                       "Cache de 32 linhas\n" +
-                       "Hits: " + hitA32+"\t\t" +
-                       "Misses: " + missA32 + "\n\n" +
-                       "Porcentagem de hits: " + df.format((hitA32*100)/288.0);
+        return "\t\t\t\t\tMapeamento Associativo\n\n" +
+                       "\t\t\t  Cache de 16 linhas\n" +
+                       "\t\t\t  Hits: " + hitA16 + "\t\t" +
+                       "\t\t\t  Misses: " + missA16 + "\n\n" +
+                       "\t\t\t  Porcentagem de hits: " + df.format((hitA16*100)/288.0)+ "\n\n\n" +
+                       "\t\t\t  Cache de 32 linhas\n" +
+                       "\t\t\t  Hits: " + hitA32+"\t\t" +
+                       "\t\t\t  Misses: " + missA32 + "\n\n" +
+                       "\t\t\t  Porcentagem de hits: " + df.format((hitA32*100)/288.0);
     }
 
     /**
@@ -140,15 +163,15 @@ public class Impressoes {
      */
 
     private String imprimeValoresMapDir(){
-        return "    Mapeamento Direto\n\n" +
-                       "Cache 16 linhas\n" +
-                       "Hits: " + hitD16 + "\t\t" +
-                       "Misses: " + missD16 + "\n\n" +
-                       "Porcentagem de hits: " + df.format((hitD16*100)/288.0)+ "\n\n\n" +
-                       "Cache 32 linhas\n" +
-                       "Hits: " + hitD32 + "\t\t" +
-                       "Misses: " + missD32 + "\n\n" +
-                       "Porcentagem de hits: " + df.format((hitD32*100)/288.0);
+        return "\t\t\t\t\tMapeamento Direto\n\n" +
+                       "\t\t\t  Cache 16 linhas\n" +
+                       "\t\t\t  Hits: " + hitD16 + "\t\t" +
+                       "\t\t\t  Misses: " + missD16 + "\n\n" +
+                       "\t\t\t  Porcentagem de hits: " + df.format((hitD16*100)/288.0)+ "\n\n\n" +
+                       "\t\t\t  Cache 32 linhas\n" +
+                       "\t\t\t  Hits: " + hitD32 + "\t\t" +
+                       "\t\t\t  Misses: " + missD32 + "\n\n" +
+                       "\t\t\t  Porcentagem de hits: " + df.format((hitD32*100)/288.0);
     }
 
     /**
@@ -173,6 +196,53 @@ public class Impressoes {
         cacheMapDir = imprimeCacheMapeamentoDireto();
 
         return cacheMapAsso + "\n\n\n\n" + cacheMapDir;
+    }
+
+    /**
+     *
+     * Insere na variavel 'cacheMapAssoOrig' o valor de retorno do metodo 'imprimeCacheMapeamentoAssociativo(Leituras)',
+     * o qual ira retornar duas tabelas simulando duas configuracoes de cache com mapeamento associativo
+     *
+     * Insere na variavel 'cacheMapDirOrig' o valor de retorno do metodo 'imprimeCacheMapeamentoDireto(Leituras)', o qual ira
+     * retornar duas tabelas simulando duas configuracoes de cache com mapeamento direto
+     *
+     * Retorna a concatenacao das duas variaveis 'cacheMapAssoOrig' e 'cacheMapDirOrig'
+     *
+     *
+     * @method imprimeCacheMapeamentoAssociativo()
+     * @method imprimeCacheMapeamentoDireto()
+     * @return String
+     */
+
+    private String imprimeCachesComPosMemoriaOriginal(){
+        cacheMapAssoOrig = imprimeCacheMapeamentoAssociativo(leituras);
+
+        cacheMapDirOrig = imprimeCacheMapeamentoDireto(leituras);
+
+        return cacheMapAssoOrig + "\n\n\n\n\n" + cacheMapDirOrig;
+    }
+
+    /**
+     *
+     * Retorna duas tabelas simulando duas configuracoes de cache com mapeamento associativo. Com o uso do metodo
+     * 'toStringPosMemoriaOriginal()' da cache, eh possivel imprimir todas as linhas da cache juntamente com a
+     * posicao de memoria, a tag e o bloco de palavras correspondente de cada linha
+     *
+     *
+     *
+     * @method toStringPosMemoriaOriginal()
+     * @return String
+     */
+
+    private String imprimeCacheMapeamentoAssociativo(Leituras leituras){
+        return "\t\t\t\t\tMapeamento associativo\n\n" +
+                       "Cache 16 linhas\n" +
+                       "Posicao Memoria     ===>        Tag              |  Bloco\n\n" +
+                       cacheAsso16.toStringPosMemoriaOriginal(leituras) +
+                       "\n\n\n" +
+                       "Cache 32 linhas\n" +
+                       "Posicao Memoria     ===>        Tag               |  Bloco\n\n" +
+                       cacheAsso32.toStringPosMemoriaOriginal(leituras);
     }
 
     /**
@@ -202,6 +272,29 @@ public class Impressoes {
     /**
      *
      * Retorna duas tabelas simulando duas configuracoes de cache com mapeamento direto. Com o uso do metodo
+     * 'toStringPosMemoriaOriginal(Leituas)' da cache, eh possivel imprimir todas as linhas da cache juntamente
+     * com a posicao de memoria, a propria linha, a tag e o bloco de palavras de cada linha
+     *
+     *
+     *
+     * @method toStringPosMemoriaOriginal()
+     * @return String
+     */
+
+    private String imprimeCacheMapeamentoDireto(Leituras leituras){
+        return "\t\t\t\t\tMapeamento Direto\n\n" +
+                       "Cache 16 linhas\n" +
+                       "Posicao Memoria     ===>        Linha  | Tag         |  Bloco\n" +
+                       cacheDir16.toStringPosMemoriaOriginal(leituras) +
+                       "\n\n\n\n" +
+                       "Cache 32 linhas\n" +
+                       "Posicao Memoria     ===>        Linha  | Tag         | Bloco\n" +
+                       cacheDir32.toStringPosMemoriaOriginal(leituras);
+    }
+
+    /**
+     *
+     * Retorna duas tabelas simulando duas configuracoes de cache com mapeamento direto. Com o uso do metodo
      * 'toString()' da cache, eh possivel imprimir todas as linhas da cache juntamente com a posicao de memoria,
      * a propria linha, a tag e o bloco de palavras de cada linha
      *
@@ -214,7 +307,7 @@ public class Impressoes {
     private String imprimeCacheMapeamentoDireto() {
         return "\t\t\t\t\tMapeamento Direto\n\n" +
                        "Cache 16 linhas\n" +
-                       "Posicao Memoria     ===>        Linha | Tag         |  Bloco\n" +
+                       "Posicao Memoria     ===>        Linha  | Tag         |  Bloco\n" +
                        cacheDir16.toString() +
                        "\n\n\n\n" +
                        "Cache 32 linhas\n" +
@@ -270,12 +363,45 @@ public class Impressoes {
      *
      * Retorna o valor armazenado na variavel 'caches'
      *
+     *
      * @return String
      */
 
     public String getCaches(){
         return caches;
     }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'cachesOrig'
+     *
+     *
+     * @return String
+     */
+
+    public String getCachesOrig(){
+        return cachesOrig;
+    }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'cacheMapAssoOrig'
+     *
+     *
+     * @return String
+     */
+
+    public String getCacheMapAssoOrig(){return cacheMapAssoOrig;}
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'cacheMapDirOrig'
+     *
+     *
+     * @return String
+     */
+
+    public String getCacheMapDirOrig(){return cacheMapDirOrig;}
 
     /**
      *
@@ -292,6 +418,17 @@ public class Impressoes {
 
     /**
      *
+     * Retorna a contatenacao dos valores armazenados nas variaveis 'valoresAssociativo' e 'cacheMapAssoOrig'
+     *
+     *
+     *
+     * @return String
+     */
+
+    public String getAssociativoOrig(){return valoresAssociativo + "\n\n\n\n\n\n\n" + cacheMapAssoOrig; }
+
+    /**
+     *
      * Retorna a contatenacao dos valores armazenados nas variaveis 'valoresDireto' e 'cacheMapDir'
      *
      *
@@ -302,6 +439,16 @@ public class Impressoes {
     public String getDireto(){
         return valoresDireto + "\n\n\n\n\n\n\n\n" + cacheMapDir;
     }
+
+    /**
+     *
+     * Retorna a contatenacao dos valores armazenados nas variaveis 'valoresDireto' e 'cacheMapDirOrig'
+     *
+     *
+     * @return String
+     */
+
+    public String getDiretoOrig(){return valoresDireto + "\n\n\n\n\n\n\n" + cacheMapDirOrig; }
 
     /**
      *
@@ -501,6 +648,18 @@ public class Impressoes {
                        "Posicao Memoria     ===>        Linha  | Tag         | Bloco\n" +
                        cacheDir32.toStringTxt();
 
+    }
+
+    /**
+     *
+     * Retorna o valor armazenado na variavel 'leituras'
+     *
+     *
+     * @return String
+     */
+
+    Leituras getLeituras(){
+        return leituras;
     }
 
 }
