@@ -216,6 +216,7 @@ public class App {
                 break;
             case 18:
                 System.out.println("\n" + impressoes.getCacheMapDirOrig());
+                break;
             case 19:
                 System.out.println("\n" + impressoes.getAssociativoOrig());
                 break;
@@ -353,6 +354,39 @@ public class App {
             case 14:
                 arquivo.escreveMapeamentoDiretoOrig();
                 break;
+            case 15:
+                arquivo.escreveHitsEMisses();
+                break;
+            case 16:
+                arquivo.escreveTodosHits();
+                break;
+            case 17:
+                arquivo.escreveTodosMisses();
+                break;
+            case 18:
+                arquivo.escreveHits32Dir();
+                arquivo.escreveHits32Asso();
+                break;
+            case 19:
+                arquivo.escreveMisses32Asso();
+                arquivo.escreveMisses32Dir();
+                break;
+            case 20:
+                arquivo.escreveHits16Dir();
+                arquivo.escreveHits16Asso();
+                break;
+            case 21:
+                arquivo.escreveMisses16Asso();
+                arquivo.escreveMisses16Dir();
+                break;
+            case 22:
+                arquivo.escreveHits16Dir();
+                arquivo.escreveHits32Dir();
+                break;
+            case 23:
+                arquivo.escreveHits16Asso();
+                arquivo.escreveHits32Asso();
+                break;
             default:
                 System.err.println("\n" + "Opcao Invalida!");
         }
@@ -387,6 +421,15 @@ public class App {
         System.out.println("12 - Cache do Mapeamento Direto com posicao de memoria original");
         System.out.println("13 - Todos os dados do Mapeamento Associativo com posicao de memoria original");
         System.out.println("14 - Todos os dados do Mapeamento Direto com posicao de memoria original");
+        System.out.println("15 - Todos os enderecos com hit ou miss");
+        System.out.println("16 - Todos os enderecos com hit");
+        System.out.println("17 - Todos os enderecos com miss");
+        System.out.println("18 - Todos os hits de 32 linhas");
+        System.out.println("19 - Todos os misses de 32 linhas");
+        System.out.println("20 - Todos os hits de 16 linhas");
+        System.out.println("21 - Todos os misses de 16 linhas");
+        System.out.println("22 - Todos os hits de Mapeamento Direto");
+        System.out.println("23 - Todos os misses de Mapeamento Associativo");
     }
 
     /**
@@ -462,4 +505,5 @@ public class App {
 
         arquivo = new Arquivo(impressoes);
     }
+
 }

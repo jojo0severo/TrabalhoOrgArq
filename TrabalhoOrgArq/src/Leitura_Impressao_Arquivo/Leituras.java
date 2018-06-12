@@ -296,7 +296,7 @@ public class Leituras {
         int index = 0;
 
         for (String line = bf.readLine(); line != null; line = bf.readLine()){
-            binHexa[index][1] = "   " + line;;
+            binHexa[index][1] = "   " + line;
             index++;
         }
 
@@ -548,5 +548,21 @@ public class Leituras {
 
     String[][] getBinHexa(){
         return binHexa;
+    }
+
+    public MapeamentoAsso getMapA16() {
+        return mapA16;
+    }
+
+    public MapeamentoAsso getMapA32() {
+        return mapA32;
+    }
+
+    public MapeamentoDir getMapD16() {
+        return mapD16;
+    }
+
+    public MapeamentoDir getMapD32() {
+        return mapD32;
     }
 }

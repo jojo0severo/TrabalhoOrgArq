@@ -558,5 +558,223 @@ public class Arquivo {
         bw.close();
     }
 
+    public void escreveHitsEMisses()throws Exception{
+        escreveHitsEMisses16Asso();
+        escreveHitsEMisses32Asso();
+        escreveHitsEMisses16Dir();
+        escreveHitsEMisses32Dir();
+    }
+
+    public void escreveTodosHits()throws Exception{
+        escreveHits16Asso();
+        escreveHits32Asso();
+        escreveHits16Dir();
+        escreveHits32Dir();
+    }
+
+    public void escreveTodosMisses() throws Exception{
+        escreveMisses16Asso();
+        escreveMisses32Asso();
+        escreveMisses16Dir();
+        escreveMisses32Dir();
+    }
+
+    public void escreveHitsEMisses16Asso()throws  Exception{
+        File file = new File("ArquivosGerados/HitsEMisses16Asso.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList16Asso().size();i++){
+            bw.write(impressoes.getHitsMissesList16Asso().get(i));
+            bw.newLine();
+        }
+
+        bw.flush();
+        bw.close();
+
+    }
+
+    public void escreveHitsEMisses32Asso()throws Exception{
+        File file = new File("ArquivosGerados/HitsEMisses32Asso.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList32Asso().size();i++){
+            bw.write(impressoes.getHitsMissesList32Asso().get(i));
+            bw.newLine();
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveHitsEMisses16Dir() throws Exception{
+        File file = new File("ArquivosGerados/HitsEMisses16Dir.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList16Dir().size();i++){
+            bw.write(impressoes.getHitsMissesList16Dir().get(i));
+            bw.newLine();
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveHitsEMisses32Dir() throws Exception{
+        File file = new File("ArquivosGerados/HitsEMisses32Dir.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMisses32ListDir().size();i++){
+            bw.write(impressoes.getHitsMisses32ListDir().get(i));
+            bw.newLine();
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveHits16Asso()throws Exception{
+        File file = new File("ArquivosGerados/Hits16Asso.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList32Asso().size();i++){
+            if (impressoes.getHitsMissesList16Asso().get(i).toLowerCase().contains("hit")) {
+                bw.write(impressoes.getHitsMissesList32Asso().get(i));
+                bw.newLine();
+            }
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveHits32Asso()throws Exception{
+        File file = new File("ArquivosGerados/Hits32Asso.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList32Asso().size();i++){
+            if (impressoes.getHitsMissesList32Asso().get(i).toLowerCase().contains("hit")) {
+                bw.write(impressoes.getHitsMissesList32Asso().get(i));
+                bw.newLine();
+            }
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveHits16Dir()throws Exception{
+        File file = new File("ArquivosGerados/Hits16Dir.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList32Asso().size();i++){
+            if (impressoes.getHitsMissesList16Dir().get(i).toLowerCase().contains("hit")) {
+                bw.write(impressoes.getHitsMissesList32Asso().get(i));
+                bw.newLine();
+            }
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveHits32Dir()throws Exception{
+        File file = new File("ArquivosGerados/Hits32Dir.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList32Asso().size();i++){
+            if (impressoes.getHitsMisses32ListDir().get(i).toLowerCase().contains("hit")) {
+                bw.write(impressoes.getHitsMissesList32Asso().get(i));
+                bw.newLine();
+            }
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveMisses16Asso()throws Exception{
+        File file = new File("ArquivosGerados/Mishses16Asso.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList32Asso().size();i++){
+            if (impressoes.getHitsMissesList16Asso().get(i).toLowerCase().contains("miss")) {
+                bw.write(impressoes.getHitsMissesList32Asso().get(i));
+                bw.newLine();
+            }
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveMisses32Asso()throws Exception{
+        File file = new File("ArquivosGerados/Misses32Asso.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList32Asso().size();i++){
+            if (impressoes.getHitsMissesList32Asso().get(i).toLowerCase().contains("miss")) {
+                bw.write(impressoes.getHitsMissesList32Asso().get(i));
+                bw.newLine();
+            }
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveMisses16Dir()throws Exception{
+        File file = new File("ArquivosGerados/Misfses16Dir.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList32Asso().size();i++){
+            if (impressoes.getHitsMissesList16Dir().get(i).toLowerCase().contains("miss")) {
+                bw.write(impressoes.getHitsMissesList32Asso().get(i));
+                bw.newLine();
+            }
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
+    public void escreveMisses32Dir()throws Exception{
+        File file = new File("ArquivosGerados/Miseses32Dir.txt");
+        file.createNewFile();
+
+        this.bw = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < impressoes.getHitsMissesList32Asso().size();i++){
+            if (impressoes.getHitsMisses32ListDir().get(i).toLowerCase().contains("miss")) {
+                bw.write(impressoes.getHitsMissesList32Asso().get(i));
+                bw.newLine();
+            }
+        }
+
+        bw.flush();
+        bw.close();
+    }
+
 
 }

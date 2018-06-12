@@ -12,15 +12,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="155">
+              <caret line="144" column="43" selection-start-line="144" selection-start-column="43" selection-end-line="144" selection-end-column="43" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;class#App#0" />
                 <element signature="docComment;method#main#0;class#App#0" />
                 <element signature="docComment;method#acoesUsuario#0;class#App#0" />
+                <element signature="method#acoesUsuario#0;class#App#0" />
                 <element signature="docComment;method#acoesImpressao#0;class#App#0" />
                 <element signature="method#acoesImpressao#0;class#App#0" />
                 <element signature="docComment;method#escolhasImpressao#0;class#App#0" />
@@ -38,86 +40,55 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Leituras.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-33">
+              <caret line="302" selection-start-line="302" selection-end-line="302" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1294#2306#0" />
+                <element signature="e#2517#2870#0" />
+                <element signature="e#2893#2894#0" expanded="true" />
+                <element signature="e#2926#2927#0" expanded="true" />
+                <element signature="e#2933#3165#0" />
+                <element signature="e#3291#3861#0" />
+                <element signature="e#4232#4802#0" />
+                <element signature="e#5174#5743#0" />
+                <element signature="e#5174#6103#0" />
+                <element signature="e#6109#6678#0" />
+                <element signature="e#8196#8691#0" />
+                <element signature="e#9031#9486#0" />
+                <element signature="e#9727#10173#0" />
+                <element signature="e#9727#10408#0" />
+                <element signature="e#10414#10575#0" />
+                <element signature="e#10687#10848#0" />
+                <element signature="e#10960#11145#0" />
+                <element signature="e#11207#11393#0" />
+                <element signature="e#11457#11642#0" />
+                <element signature="e#11704#11890#0" />
+                <element signature="e#11954#12139#0" />
+                <element signature="e#12201#12387#0" />
+                <element signature="e#12451#12636#0" />
+                <element signature="e#12698#12884#0" />
+                <element signature="e#12948#13138#0" />
+                <element signature="e#13218#13408#0" />
+                <element signature="e#13488#13677#0" />
+                <element signature="e#13755#13944#0" />
+                <element signature="e#14022#14237#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Impressoes.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Impressoes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1062">
-              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="-1311">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Impressoes#0" />
-                <element signature="e#988#1963#0" />
-                <element signature="e#1969#2692#0" />
-                <element signature="e#1969#2829#0" />
-                <element signature="e#2835#3483#0" />
-                <element signature="e#2835#3612#0" />
-                <element signature="e#3618#4016#0" />
-                <element signature="e#3618#4666#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapeamentoAsso.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-              <folding>
-                <element signature="docComment;class#MapeamentoAsso#0" />
-                <element signature="docComment;method#MapeamentoAsso#0;class#MapeamentoAsso#0" />
-                <element signature="docComment;method#add32#0;class#MapeamentoAsso#0" />
-                <element signature="method#add32#0;class#MapeamentoAsso#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CacheDir.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
-              <folding>
-                <element signature="docComment;class#CacheDir#0" />
-                <element signature="docComment;method#CacheDir#0;class#CacheDir#0" />
-                <element signature="docComment;method#add#0;class#CacheDir#0" />
-                <element signature="docComment;method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
-                <element signature="method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
-                <element signature="docComment;method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
-                <element signature="method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
-                <element signature="docComment;method#achaLinha#0;class#CacheDir#0" />
-                <element signature="method#achaLinha#0;class#CacheDir#0" />
-                <element signature="docComment;method#achaTag#0;class#CacheDir#0" />
-                <element signature="docComment;method#toString#0;class#CacheDir#0" />
-                <element signature="docComment;method#toStringTxt#0;class#CacheDir#0" />
-                <element signature="method#toStringTxt#0;class#CacheDir#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CacheAsso.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/CacheAsso.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="110" column="22" lean-forward="true" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
-              <folding>
-                <element signature="docComment;method#CacheAsso#0;class#CacheAsso#0" />
-                <element signature="method#CacheAsso#0;class#CacheAsso#0" />
-                <element signature="docComment;method#add#0;class#CacheAsso#0" />
-                <element signature="docComment;method#achaTag#0;class#CacheAsso#0" />
-                <element signature="method#achaTag#0;class#CacheAsso#0" />
-                <element signature="docComment;method#achaPalavra#0;class#CacheAsso#0" />
-                <element signature="method#achaPalavra#0;class#CacheAsso#0" />
-                <element signature="docComment;method#calculaBin#0;class#CacheAsso#0" />
-                <element signature="method#calculaBin#0;class#CacheAsso#0" />
-                <element signature="docComment;method#toString#0;class#CacheAsso#0" />
-                <element signature="method#toString#0;class#CacheAsso#0" />
-                <element signature="docComment;method#toStringTxt#0;class#CacheAsso#0" />
-                <element signature="method#toStringTxt#0;class#CacheAsso#0" />
-                <element signature="docComment;method#toStringPosMemoriaOriginal#0;class#CacheAsso#0" />
-                <element signature="method#toStringPosMemoriaOriginal#0;class#CacheAsso#0" />
+                <element signature="e#1016#1991#0" />
               </folding>
             </state>
           </provider>
@@ -126,14 +97,13 @@
       <file leaf-file-name="Arquivo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Arquivo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="341" column="51" selection-start-line="341" selection-start-column="51" selection-end-line="341" selection-end-column="51" />
+            <state relative-caret-position="317">
+              <caret line="572" column="5" lean-forward="true" selection-start-line="572" selection-start-column="5" selection-end-line="572" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#247#248#0" expanded="true" />
                 <element signature="e#291#292#0" expanded="true" />
                 <element signature="docComment;method#escreveDocumentoCompleto#0;class#Arquivo#0" />
-                <element signature="method#escreveDocumentoCompleto#0;class#Arquivo#0" />
                 <element signature="docComment;method#escreveValores#0;class#Arquivo#0" />
                 <element signature="method#escreveValores#0;class#Arquivo#0" />
                 <element signature="docComment;method#escreveCaches#0;class#Arquivo#0" />
@@ -150,9 +120,6 @@
                 <element signature="method#escreveValorDireto#0;class#Arquivo#0" />
                 <element signature="docComment;method#escreveCacheDireto#0;class#Arquivo#0" />
                 <element signature="method#escreveCacheDireto#0;class#Arquivo#0" />
-                <element signature="method#escreveCachesTxt#0;class#Arquivo#0" />
-                <element signature="docComment;method#escreveEnderecosBinHexa#0;class#Arquivo#0" />
-                <element signature="method#escreveEnderecosBinHexa#0;class#Arquivo#0" />
                 <element signature="docComment;method#escreveCachesComEnderecoOriginal#0;class#Arquivo#0" />
                 <element signature="method#escreveCachesComEnderecoOriginal#0;class#Arquivo#0" />
                 <element signature="docComment;method#escreveCacheAssoOrig#0;class#Arquivo#0" />
@@ -162,17 +129,7 @@
                 <element signature="docComment;method#escreveMapeamentoAssociativoOrig#0;class#Arquivo#0" />
                 <element signature="method#escreveMapeamentoAssociativoOrig#0;class#Arquivo#0" />
                 <element signature="docComment;method#escreveMapeamentoDiretoOrig#0;class#Arquivo#0" />
-                <element signature="method#escreveMapeamentoDiretoOrig#0;class#Arquivo#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapeamentoDir.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/MapeamentoDir.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -191,9 +148,13 @@
       <find>System</find>
       <find>0</find>
       <find>file.setReadOnly();</find>
+      <find>potato</find>
+      <find>00000000001111</find>
+      <find>AdressesHexa</find>
+      <find>AdressesHe</find>
+      <find>Adres</find>
     </findStrings>
     <replaceStrings>
-      <replace />
       <replace />
     </replaceStrings>
   </component>
@@ -220,13 +181,15 @@
         <option value="$PROJECT_DIR$/Adresses.txt" />
         <option value="$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java" />
         <option value="$PROJECT_DIR$/src/MapeamentoDireto/Linha.java" />
+        <option value="$PROJECT_DIR$/src/MapeamentoAssociativo/CacheAsso.java" />
+        <option value="$PROJECT_DIR$/src/Main/CachesInterEHit_Miss.java" />
+        <option value="$PROJECT_DIR$/src/Main/ImpressoesEmMassa.java" />
+        <option value="$PROJECT_DIR$/src/MapeamentoDireto/MapeamentoDir.java" />
+        <option value="$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java" />
         <option value="$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Impressoes.java" />
         <option value="$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java" />
-        <option value="$PROJECT_DIR$/src/Main/App.java" />
-        <option value="$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java" />
-        <option value="$PROJECT_DIR$/src/MapeamentoDireto/MapeamentoDir.java" />
-        <option value="$PROJECT_DIR$/src/MapeamentoAssociativo/CacheAsso.java" />
         <option value="$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Arquivo.java" />
+        <option value="$PROJECT_DIR$/src/Main/App.java" />
       </list>
     </option>
   </component>
@@ -240,22 +203,29 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1385" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="TrabalhoOrgArq" type="b2602c69:ProjectViewProjectNode" />
               <item name="TrabalhoOrgArq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TrabalhoOrgArq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TrabalhoOrgArq" type="462c0819:PsiDirectoryNode" />
+              <item name="ArquivosGerados" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TrabalhoOrgArq" type="b2602c69:ProjectViewProjectNode" />
@@ -268,24 +238,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Leitura_Impressao_Arquivo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TrabalhoOrgArq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TrabalhoOrgArq" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="MapeamentoAssociativo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TrabalhoOrgArq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TrabalhoOrgArq" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="MapeamentoDireto" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -293,7 +249,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Projects/JavaProjects/TrabalhoOrgAr2/src/MapeamentoDireto/CacheDir.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../OrgArq_T3" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Scala Compiler" />
@@ -391,16 +347,20 @@
       <workItem from="1528530649756" duration="1834000" />
       <workItem from="1528565674979" duration="31337000" />
       <workItem from="1528623852789" duration="16847000" />
-      <workItem from="1528657689359" duration="18259000" />
+      <workItem from="1528657689359" duration="18859000" />
+      <workItem from="1528680635913" duration="708000" />
+      <workItem from="1528685592397" duration="137000" />
+      <workItem from="1528749948937" duration="5809000" />
+      <workItem from="1528756811590" duration="149000" />
+      <workItem from="1528764852710" duration="2443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77468000" />
+    <option name="totallyTimeSpent" value="87314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -412,13 +372,12 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.47448274" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.88827586" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -430,6 +389,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,131 +407,45 @@
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java</url>
+          <line>151</line>
+          <properties />
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java</url>
+          <line>180</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java</url>
+          <line>238</line>
+          <properties />
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java</url>
+          <line>272</line>
+          <properties />
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java</url>
+          <line>302</line>
+          <properties />
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="65" />
+      <option name="time" value="74" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
-          <folding>
-            <element signature="docComment;class#MapeamentoAsso#0" />
-            <element signature="method#MapeamentoAsso#0;class#MapeamentoAsso#0" />
-            <element signature="method#add16#0;class#MapeamentoAsso#0" />
-            <element signature="docComment;method#add32#0;class#MapeamentoAsso#0" />
-            <element signature="method#add32#0;class#MapeamentoAsso#0" />
-            <element signature="docComment;method#getCache#0;class#MapeamentoAsso#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/CacheAsso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-          <folding>
-            <element signature="docComment;method#CacheAsso#0;class#CacheAsso#0" />
-            <element signature="method#CacheAsso#0;class#CacheAsso#0" />
-            <element signature="method#add#0;class#CacheAsso#0" />
-            <element signature="docComment;method#achaTag#0;class#CacheAsso#0" />
-            <element signature="method#achaTag#0;class#CacheAsso#0" />
-            <element signature="docComment;method#achaPalavra#0;class#CacheAsso#0" />
-            <element signature="method#achaPalavra#0;class#CacheAsso#0" />
-            <element signature="docComment;method#calculaBin#0;class#CacheAsso#0" />
-            <element signature="docComment;method#toString#0;class#CacheAsso#0" />
-            <element signature="method#toString#0;class#CacheAsso#0" />
-            <element signature="docComment;method#toStringTxt#0;class#CacheAsso#0" />
-            <element signature="method#toStringTxt#0;class#CacheAsso#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="docComment;class#App#0" />
-            <element signature="docComment;method#main#0;class#App#0" />
-            <element signature="docComment;method#acoesUsuario#0;class#App#0" />
-            <element signature="docComment;method#acoesImpressao#0;class#App#0" />
-            <element signature="method#acoesImpressao#0;class#App#0" />
-            <element signature="docComment;method#escolhasImpressao#0;class#App#0" />
-            <element signature="method#escolhasImpressao#0;class#App#0" />
-            <element signature="docComment;method#acoesSalvar#0;class#App#0" />
-            <element signature="method#acoesSalvar#0;class#App#0" />
-            <element signature="docComment;method#escolhasSalvar#0;class#App#0" />
-            <element signature="method#escolhasSalvar#0;class#App#0" />
-            <element signature="docComment;method#pausa#0;class#App#0" />
-            <element signature="method#pausa#0;class#App#0" />
-            <element signature="docComment;method#preCondicoes#0;class#App#0" />
-            <element signature="method#preCondicoes#0;class#App#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1332">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="docComment;class#App#0" />
-            <element signature="docComment;method#main#0;class#App#0" />
-            <element signature="docComment;method#acoesUsuario#0;class#App#0" />
-            <element signature="docComment;method#acoesImpressao#0;class#App#0" />
-            <element signature="method#acoesImpressao#0;class#App#0" />
-            <element signature="docComment;method#escolhasImpressao#0;class#App#0" />
-            <element signature="method#escolhasImpressao#0;class#App#0" />
-            <element signature="docComment;method#acoesSalvar#0;class#App#0" />
-            <element signature="method#acoesSalvar#0;class#App#0" />
-            <element signature="docComment;method#escolhasSalvar#0;class#App#0" />
-            <element signature="method#escolhasSalvar#0;class#App#0" />
-            <element signature="docComment;method#pausa#0;class#App#0" />
-            <element signature="method#pausa#0;class#App#0" />
-            <element signature="docComment;method#preCondicoes#0;class#App#0" />
-            <element signature="method#preCondicoes#0;class#App#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/MapeamentoDir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="docComment;class#CacheDir#0" />
-            <element signature="docComment;method#CacheDir#0;class#CacheDir#0" />
-            <element signature="method#CacheDir#0;class#CacheDir#0" />
-            <element signature="method#add#0;class#CacheDir#0" />
-            <element signature="docComment;method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
-            <element signature="method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
-            <element signature="docComment;method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
-            <element signature="method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
-            <element signature="docComment;method#achaLinha#0;class#CacheDir#0" />
-            <element signature="method#achaLinha#0;class#CacheDir#0" />
-            <element signature="docComment;method#achaTag#0;class#CacheDir#0" />
-            <element signature="method#achaTag#0;class#CacheDir#0" />
-            <element signature="docComment;method#toString#0;class#CacheDir#0" />
-            <element signature="method#toString#0;class#CacheDir#0" />
-            <element signature="docComment;method#toStringTxt#0;class#CacheDir#0" />
-            <element signature="method#toStringTxt#0;class#CacheDir#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -579,22 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1242">
           <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-          <folding>
-            <element signature="docComment;class#Linha#0" />
-            <element signature="docComment;method#Linha#0;class#Linha#0" />
-            <element signature="method#Linha#0;class#Linha#0" />
-            <element signature="docComment;method#add#0;class#Linha#0" />
-            <element signature="method#add#0;class#Linha#0" />
-            <element signature="docComment;method#calculaBin#0;class#Linha#0" />
-            <element signature="method#calculaBin#0;class#Linha#0" />
-            <element signature="docComment;method#getTag#0;class#Linha#0" />
-            <element signature="docComment;method#getLinha#0;class#Linha#0" />
-            <element signature="docComment;method#setTag#0;class#Linha#0" />
-            <element signature="docComment;method#toString#0;class#Linha#0" />
-            <element signature="method#toString#0;class#Linha#0" />
-            <element signature="docComment;method#toStringTxt#0;class#Linha#0" />
-            <element signature="method#toStringTxt#0;class#Linha#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,9 +468,11 @@
         <state relative-caret-position="162">
           <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#App#0" />
             <element signature="docComment;method#main#0;class#App#0" />
             <element signature="docComment;method#acoesUsuario#0;class#App#0" />
+            <element signature="method#acoesUsuario#0;class#App#0" />
             <element signature="docComment;method#acoesImpressao#0;class#App#0" />
             <element signature="method#acoesImpressao#0;class#App#0" />
             <element signature="docComment;method#escolhasImpressao#0;class#App#0" />
@@ -654,22 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;class#Linha#0" />
-            <element signature="docComment;method#Linha#0;class#Linha#0" />
-            <element signature="method#Linha#0;class#Linha#0" />
-            <element signature="docComment;method#add#0;class#Linha#0" />
-            <element signature="method#add#0;class#Linha#0" />
-            <element signature="docComment;method#calculaBin#0;class#Linha#0" />
-            <element signature="method#calculaBin#0;class#Linha#0" />
-            <element signature="docComment;method#getTag#0;class#Linha#0" />
-            <element signature="docComment;method#getLinha#0;class#Linha#0" />
-            <element signature="docComment;method#setTag#0;class#Linha#0" />
-            <element signature="docComment;method#toString#0;class#Linha#0" />
-            <element signature="method#toString#0;class#Linha#0" />
-            <element signature="docComment;method#toStringTxt#0;class#Linha#0" />
-            <element signature="method#toStringTxt#0;class#Linha#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,9 +529,11 @@
         <state relative-caret-position="684">
           <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#App#0" />
             <element signature="docComment;method#main#0;class#App#0" />
             <element signature="docComment;method#acoesUsuario#0;class#App#0" />
+            <element signature="method#acoesUsuario#0;class#App#0" />
             <element signature="docComment;method#acoesImpressao#0;class#App#0" />
             <element signature="method#acoesImpressao#0;class#App#0" />
             <element signature="docComment;method#escolhasImpressao#0;class#App#0" />
@@ -738,263 +584,129 @@
     <entry file="file://$PROJECT_DIR$/src/Cache32.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa13896.10864/MapeamentoAsso.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/teste.java" />
-    <entry file="file://$PROJECT_DIR$/Caches.txt">
+    <entry file="file://$PROJECT_DIR$/Caches.txt" />
+    <entry file="file://$PROJECT_DIR$/Adresses.txt" />
+    <entry file="file://$PROJECT_DIR$/CachesEnderecoOrig" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/Adresses.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CacheAssociativo.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CacheAssoEnderecoOrig.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CacheDirEnderecoOrig.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CacheDireto.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CachesEnderecoOrig.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/MapeamentoDireto.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/ValoresMapeamentos.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/ValorDireto.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/ValorAssociativo.txt" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/MapeamentoAssociativo.txt" />
+    <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/Linha.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Adresses.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="288" selection-start-line="288" selection-end-line="288" />
+        <state relative-caret-position="720">
+          <caret line="223" column="28" selection-start-line="223" selection-start-column="28" selection-end-line="223" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CachesEnderecoOrig">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="103" column="54" lean-forward="true" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
+        </state>
+      </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/DocumentoCompleto.txt" />
+    <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/CacheAsso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="321" column="5" lean-forward="true" selection-start-line="321" selection-start-column="5" selection-end-line="321" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CachesInicioAoFimAssoci" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CachesInicioAoFimAssoci32" />
+    <entry file="file://$PROJECT_DIR$/src/Main/ImpressoesEmMassa.java" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CachesInicioAoFimAssoci16" />
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CachesTagPalavraConcat.txt" />
+    <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/MapeamentoDir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="92" column="7" lean-forward="true" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/HitsEMisses16Asso.txt" />
     <entry file="file://$PROJECT_DIR$/ArquivosNecessarios/AdressesBin.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="241" column="16" lean-forward="true" selection-start-line="241" selection-start-column="16" selection-end-line="241" selection-end-column="16" />
+        <state relative-caret-position="396">
+          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ArquivosNecessarios/AdressesHexa">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
+        <state relative-caret-position="592">
           <caret line="287" column="4" selection-start-line="287" selection-start-column="4" selection-end-line="287" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/Adresses.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4592" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CacheAssociativo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CacheAssoEnderecoOrig.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CacheDirEnderecoOrig.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-416" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CacheDireto.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-416" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/Caches.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1550" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/CachesEnderecoOrig.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1568" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/DocumentoCompleto.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/MapeamentoDireto.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-488">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/ValoresMapeamentos.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/ValorDireto.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/ValorAssociativo.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArquivosGerados/MapeamentoAssociativo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Leituras#0;class#Leituras#0" />
-            <element signature="docComment;method#le#0;class#Leituras#0" />
-            <element signature="method#le#0;class#Leituras#0" />
-            <element signature="docComment;method#le2#0;class#Leituras#0" />
-            <element signature="docComment;method#guardaEnderecos#0;class#Leituras#0" />
-            <element signature="method#guardaEnderecos#0;class#Leituras#0" />
-            <element signature="docComment;method#leAssociativoAdresses16#0;class#Leituras#0" />
-            <element signature="method#leAssociativoAdresses16#0;class#Leituras#0" />
-            <element signature="docComment;method#leAssociativoAdresses32#0;class#Leituras#0" />
-            <element signature="method#leAssociativoAdresses32#0;class#Leituras#0" />
-            <element signature="docComment;method#leDiretoAdresses16#0;class#Leituras#0" />
-            <element signature="method#leDiretoAdresses16#0;class#Leituras#0" />
-            <element signature="docComment;method#leDiretoAdresses32#0;class#Leituras#0" />
-            <element signature="method#leDiretoAdresses32#0;class#Leituras#0" />
-            <element signature="docComment;method#leAdressesBin#0;class#Leituras#0" />
-            <element signature="method#leAdressesBin#0;class#Leituras#0" />
-            <element signature="docComment;method#leAdressesHexa#0;class#Leituras#0" />
-            <element signature="method#leAdressesHexa#0;class#Leituras#0" />
-            <element signature="docComment;method#guardaEnderecosOriginais16#0;class#Leituras#0" />
-            <element signature="method#guardaEnderecosOriginais16#0;class#Leituras#0" />
-            <element signature="docComment;method#guardaEnderecosOriginais32#0;class#Leituras#0" />
-            <element signature="method#guardaEnderecosOriginais32#0;class#Leituras#0" />
-            <element signature="docComment;method#getEnderecoPosMemoria16#0;class#Leituras#0" />
-            <element signature="docComment;method#getEnderecoPosMemoria32#0;class#Leituras#0" />
-            <element signature="docComment;method#getHitA16#0;class#Leituras#0" />
-            <element signature="docComment;method#getMissA16#0;class#Leituras#0" />
-            <element signature="docComment;method#getHitA32#0;class#Leituras#0" />
-            <element signature="docComment;method#getMissA32#0;class#Leituras#0" />
-            <element signature="docComment;method#getHitD16#0;class#Leituras#0" />
-            <element signature="docComment;method#getMissD16#0;class#Leituras#0" />
-            <element signature="docComment;method#getHitD32#0;class#Leituras#0" />
-            <element signature="docComment;method#getMissD32#0;class#Leituras#0" />
-            <element signature="docComment;method#getCacheAsso16#0;class#Leituras#0" />
-            <element signature="docComment;method#getCacheAsso32#0;class#Leituras#0" />
-            <element signature="docComment;method#getCacheDir16#0;class#Leituras#0" />
-            <element signature="docComment;method#getCacheDir32#0;class#Leituras#0" />
-            <element signature="docComment;method#getBinHexa#0;class#Leituras#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/Linha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="223" column="28" selection-start-line="223" selection-start-column="28" selection-end-line="223" selection-end-column="28" />
-          <folding>
-            <element signature="docComment;class#Linha#0" />
-            <element signature="docComment;method#Linha#0;class#Linha#0" />
-            <element signature="method#Linha#0;class#Linha#0" />
-            <element signature="docComment;method#add#0;class#Linha#0" />
-            <element signature="method#add#0;class#Linha#0" />
-            <element signature="docComment;method#calculaBin#0;class#Linha#0" />
-            <element signature="method#calculaBin#0;class#Linha#0" />
-            <element signature="docComment;method#getTag#0;class#Linha#0" />
-            <element signature="docComment;method#getLinha#0;class#Linha#0" />
-            <element signature="docComment;method#setTag#0;class#Linha#0" />
-            <element signature="docComment;method#toString#0;class#Linha#0" />
-            <element signature="method#toString#0;class#Linha#0" />
-            <element signature="docComment;method#toStringTxt#0;class#Linha#0" />
-            <element signature="method#toStringTxt#0;class#Linha#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/MapeamentoAsso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-          <folding>
-            <element signature="docComment;class#MapeamentoAsso#0" />
-            <element signature="docComment;method#MapeamentoAsso#0;class#MapeamentoAsso#0" />
-            <element signature="docComment;method#add32#0;class#MapeamentoAsso#0" />
-            <element signature="method#add32#0;class#MapeamentoAsso#0" />
-          </folding>
+        <state relative-caret-position="497">
+          <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoAssociativo/CacheAsso.java">
+    <entry file="file://$PROJECT_DIR$/ArquivosGerados/Caches.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="110" column="22" lean-forward="true" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
-          <folding>
-            <element signature="docComment;method#CacheAsso#0;class#CacheAsso#0" />
-            <element signature="method#CacheAsso#0;class#CacheAsso#0" />
-            <element signature="docComment;method#add#0;class#CacheAsso#0" />
-            <element signature="docComment;method#achaTag#0;class#CacheAsso#0" />
-            <element signature="method#achaTag#0;class#CacheAsso#0" />
-            <element signature="docComment;method#achaPalavra#0;class#CacheAsso#0" />
-            <element signature="method#achaPalavra#0;class#CacheAsso#0" />
-            <element signature="docComment;method#calculaBin#0;class#CacheAsso#0" />
-            <element signature="method#calculaBin#0;class#CacheAsso#0" />
-            <element signature="docComment;method#toString#0;class#CacheAsso#0" />
-            <element signature="method#toString#0;class#CacheAsso#0" />
-            <element signature="docComment;method#toStringTxt#0;class#CacheAsso#0" />
-            <element signature="method#toStringTxt#0;class#CacheAsso#0" />
-            <element signature="docComment;method#toStringPosMemoriaOriginal#0;class#CacheAsso#0" />
-            <element signature="method#toStringPosMemoriaOriginal#0;class#CacheAsso#0" />
-          </folding>
-        </state>
+        <state relative-caret-position="-756" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/App.java">
+    <entry file="file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Leituras.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="docComment;class#App#0" />
-            <element signature="docComment;method#main#0;class#App#0" />
-            <element signature="docComment;method#acoesUsuario#0;class#App#0" />
-            <element signature="docComment;method#acoesImpressao#0;class#App#0" />
-            <element signature="method#acoesImpressao#0;class#App#0" />
-            <element signature="docComment;method#escolhasImpressao#0;class#App#0" />
-            <element signature="method#escolhasImpressao#0;class#App#0" />
-            <element signature="docComment;method#acoesSalvar#0;class#App#0" />
-            <element signature="method#acoesSalvar#0;class#App#0" />
-            <element signature="docComment;method#escolhasSalvar#0;class#App#0" />
-            <element signature="method#escolhasSalvar#0;class#App#0" />
-            <element signature="docComment;method#pausa#0;class#App#0" />
-            <element signature="method#pausa#0;class#App#0" />
-            <element signature="docComment;method#preCondicoes#0;class#App#0" />
-            <element signature="method#preCondicoes#0;class#App#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Impressoes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1062">
-          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="-33">
+          <caret line="302" selection-start-line="302" selection-end-line="302" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Impressoes#0" />
-            <element signature="e#988#1963#0" />
-            <element signature="e#1969#2692#0" />
-            <element signature="e#1969#2829#0" />
-            <element signature="e#2835#3483#0" />
-            <element signature="e#2835#3612#0" />
-            <element signature="e#3618#4016#0" />
-            <element signature="e#3618#4666#0" />
+            <element signature="e#1294#2306#0" />
+            <element signature="e#2517#2870#0" />
+            <element signature="e#2893#2894#0" expanded="true" />
+            <element signature="e#2926#2927#0" expanded="true" />
+            <element signature="e#2933#3165#0" />
+            <element signature="e#3291#3861#0" />
+            <element signature="e#4232#4802#0" />
+            <element signature="e#5174#5743#0" />
+            <element signature="e#5174#6103#0" />
+            <element signature="e#6109#6678#0" />
+            <element signature="e#8196#8691#0" />
+            <element signature="e#9031#9486#0" />
+            <element signature="e#9727#10173#0" />
+            <element signature="e#9727#10408#0" />
+            <element signature="e#10414#10575#0" />
+            <element signature="e#10687#10848#0" />
+            <element signature="e#10960#11145#0" />
+            <element signature="e#11207#11393#0" />
+            <element signature="e#11457#11642#0" />
+            <element signature="e#11704#11890#0" />
+            <element signature="e#11954#12139#0" />
+            <element signature="e#12201#12387#0" />
+            <element signature="e#12451#12636#0" />
+            <element signature="e#12698#12884#0" />
+            <element signature="e#12948#13138#0" />
+            <element signature="e#13218#13408#0" />
+            <element signature="e#13488#13677#0" />
+            <element signature="e#13755#13944#0" />
+            <element signature="e#14022#14237#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Arquivo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="341" column="51" selection-start-line="341" selection-start-column="51" selection-end-line="341" selection-end-column="51" />
+        <state relative-caret-position="317">
+          <caret line="572" column="5" lean-forward="true" selection-start-line="572" selection-start-column="5" selection-end-line="572" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#247#248#0" expanded="true" />
             <element signature="e#291#292#0" expanded="true" />
             <element signature="docComment;method#escreveDocumentoCompleto#0;class#Arquivo#0" />
-            <element signature="method#escreveDocumentoCompleto#0;class#Arquivo#0" />
             <element signature="docComment;method#escreveValores#0;class#Arquivo#0" />
             <element signature="method#escreveValores#0;class#Arquivo#0" />
             <element signature="docComment;method#escreveCaches#0;class#Arquivo#0" />
@@ -1011,9 +723,6 @@
             <element signature="method#escreveValorDireto#0;class#Arquivo#0" />
             <element signature="docComment;method#escreveCacheDireto#0;class#Arquivo#0" />
             <element signature="method#escreveCacheDireto#0;class#Arquivo#0" />
-            <element signature="method#escreveCachesTxt#0;class#Arquivo#0" />
-            <element signature="docComment;method#escreveEnderecosBinHexa#0;class#Arquivo#0" />
-            <element signature="method#escreveEnderecosBinHexa#0;class#Arquivo#0" />
             <element signature="docComment;method#escreveCachesComEnderecoOriginal#0;class#Arquivo#0" />
             <element signature="method#escreveCachesComEnderecoOriginal#0;class#Arquivo#0" />
             <element signature="docComment;method#escreveCacheAssoOrig#0;class#Arquivo#0" />
@@ -1023,36 +732,43 @@
             <element signature="docComment;method#escreveMapeamentoAssociativoOrig#0;class#Arquivo#0" />
             <element signature="method#escreveMapeamentoAssociativoOrig#0;class#Arquivo#0" />
             <element signature="docComment;method#escreveMapeamentoDiretoOrig#0;class#Arquivo#0" />
-            <element signature="method#escreveMapeamentoDiretoOrig#0;class#Arquivo#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/MapeamentoDir.java">
+    <entry file="file://$PROJECT_DIR$/src/Leitura_Impressao_Arquivo/Impressoes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        <state relative-caret-position="-1311">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1016#1991#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapeamentoDireto/CacheDir.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+        <state relative-caret-position="155">
+          <caret line="144" column="43" selection-start-line="144" selection-start-column="43" selection-end-line="144" selection-end-column="43" />
           <folding>
-            <element signature="docComment;class#CacheDir#0" />
-            <element signature="docComment;method#CacheDir#0;class#CacheDir#0" />
-            <element signature="docComment;method#add#0;class#CacheDir#0" />
-            <element signature="docComment;method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
-            <element signature="method#settaTipoCacheLinhas16#0;class#CacheDir#0" />
-            <element signature="docComment;method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
-            <element signature="method#settaTipoCacheLinhas32#0;class#CacheDir#0" />
-            <element signature="docComment;method#achaLinha#0;class#CacheDir#0" />
-            <element signature="method#achaLinha#0;class#CacheDir#0" />
-            <element signature="docComment;method#achaTag#0;class#CacheDir#0" />
-            <element signature="docComment;method#toString#0;class#CacheDir#0" />
-            <element signature="docComment;method#toStringTxt#0;class#CacheDir#0" />
-            <element signature="method#toStringTxt#0;class#CacheDir#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#App#0" />
+            <element signature="docComment;method#main#0;class#App#0" />
+            <element signature="docComment;method#acoesUsuario#0;class#App#0" />
+            <element signature="method#acoesUsuario#0;class#App#0" />
+            <element signature="docComment;method#acoesImpressao#0;class#App#0" />
+            <element signature="method#acoesImpressao#0;class#App#0" />
+            <element signature="docComment;method#escolhasImpressao#0;class#App#0" />
+            <element signature="method#escolhasImpressao#0;class#App#0" />
+            <element signature="docComment;method#acoesSalvar#0;class#App#0" />
+            <element signature="method#acoesSalvar#0;class#App#0" />
+            <element signature="docComment;method#escolhasSalvar#0;class#App#0" />
+            <element signature="method#escolhasSalvar#0;class#App#0" />
+            <element signature="docComment;method#pausa#0;class#App#0" />
+            <element signature="method#pausa#0;class#App#0" />
+            <element signature="docComment;method#preCondicoes#0;class#App#0" />
+            <element signature="method#preCondicoes#0;class#App#0" />
           </folding>
         </state>
       </provider>

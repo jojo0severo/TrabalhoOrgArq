@@ -4,6 +4,7 @@ import MapeamentoAssociativo.CacheAsso;
 import MapeamentoDireto.CacheDir;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 /**
  *
@@ -565,8 +566,8 @@ public class Impressoes {
                        "Hits: " + hitA16 + "\t\t" +
                        "Misses: " + missA16 + "\n\n\n" +
                        "Cache 32 linhas\n" +
-                       "Hits: " + hitD32 + "\t\t" +
-                       "Misses: " + missD32 +
+                       "Hits: " + hitA32 + "\t\t" +
+                       "Misses: " + missA32 +
                        "\n\n\n\n\n" +
                        "    Mapeamento Direto\n\n" +
                        "Cache 16 linhas\n" +
@@ -658,8 +659,24 @@ public class Impressoes {
      * @return String
      */
 
-    Leituras getLeituras(){
+    public Leituras getLeituras(){
         return leituras;
+    }
+
+    public ArrayList<String> getHitsMissesList16Asso(){
+        return leituras.getMapA16().getHitsMisses();
+    }
+
+    public ArrayList<String> getHitsMissesList32Asso(){
+        return leituras.getMapA32().getHitsMisses();
+    }
+
+    public ArrayList<String> getHitsMissesList16Dir(){
+        return leituras.getMapD16().getHitsMisses();
+    }
+
+    public ArrayList<String> getHitsMisses32ListDir(){
+        return leituras.getMapD32().getHitsMisses();
     }
 
 }
